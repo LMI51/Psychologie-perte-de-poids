@@ -1,0 +1,3668 @@
+<!-- Psycho Sapiens — Page d'introduction du questionnaire avec RGPD complet intégré -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maquette intro — Psycho Sapiens</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --plum-950:#1a0833;
+  --plum-900:#270b4d;
+  --violet-800:#3a0f72;
+  --violet-700:#4a1488;
+  --violet-600:#6a2bc6;
+  --orchid:#b98cff;
+  --amber:#f3aa45;
+  --amber-d:#dd7d12;
+  --amber-deep:#c2660a;
+  --cream:#faf5ee;
+  --cream-2:#f3ebdf;
+  --ink:#241038;
+  --muted:#73698a;
+  --line:#ece3f0;
+  --green:#1aa06d;
+  --disp:'Fraunces',Georgia,serif;
+  --body:'Inter',system-ui,sans-serif;
+}
+
+*{
+  box-sizing:border-box;
+  -webkit-tap-highlight-color:transparent;
+}
+
+html,
+body{
+  margin:0;
+}
+
+body{
+  font-family:var(--body);
+  background:
+    radial-gradient(900px 480px at 20% -8%, #efe6fb 0, transparent 60%),
+    radial-gradient(700px 420px at 108% 8%, #f7eede 0, transparent 55%),
+    #efeaf4;
+  min-height:100vh;
+  min-height:100dvh;
+  display:grid;
+  place-items:center;
+  padding:0;
+  color:var(--ink);
+  line-height:1.5;
+}
+
+.stage{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:18px;
+  width:100%;
+  min-height:100vh;
+  min-height:100dvh;
+}
+
+.stage .note{
+  font-family:var(--disp);
+  font-size:13px;
+  color:var(--muted);
+  font-style:italic;
+  max-width:360px;
+  text-align:center;
+}
+
+/* ---------- Téléphone ---------- */
+
+.phone{
+  width:100%;
+  min-height:100vh;
+  min-height:100dvh;
+  height:100vh;
+  height:100dvh;
+  border-radius:0;
+  background:transparent;
+  padding:0;
+  box-shadow:none;
+}
+
+.scr{
+  position:relative;
+  width:100%;
+  height:100%;
+  border-radius:0;
+  overflow:hidden;
+  background:var(--cream);
+}
+
+.body{
+  position:absolute;
+  inset:0;
+  overflow-y:auto;
+  overflow-x:hidden;
+  scrollbar-width:none;
+}
+
+.body::-webkit-scrollbar{
+  display:none;
+}
+
+.sbar{
+  position:relative;
+  z-index:5;
+  height:34px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:2px 24px 0;
+  font-family:var(--body);
+  font-weight:600;
+  font-size:12.5px;
+  color:#fff;
+}
+
+.sbar .dots{
+  display:flex;
+  gap:3px;
+}
+
+.sbar .dots i{
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  background:#fff;
+  opacity:.9;
+}
+
+/* ---------- Hero ---------- */
+
+.hero{
+  position:relative;
+  padding:6px 26px 78px;
+  color:#fff;
+  overflow:hidden;
+}
+
+.hero .aurora{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  background:
+    radial-gradient(620px 360px at 12% 6%, rgba(185,140,255,.55), transparent 60%),
+    radial-gradient(520px 340px at 102% 22%, rgba(243,170,69,.40), transparent 58%),
+    radial-gradient(700px 500px at 50% 120%, rgba(106,43,198,.55), transparent 60%),
+    linear-gradient(165deg,#3a0f72 0%, #270b4d 55%, #1a0833 100%);
+}
+
+.hero .grain{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  opacity:.5;
+  mix-blend-mode:soft-light;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.hero > *{
+  position:relative;
+  z-index:2;
+}
+
+.eyebrow{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:var(--body);
+  font-weight:600;
+  font-size:10px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:#f6cd8f;
+  margin:18px auto 0;
+  padding:10px 0;
+  width:100%;
+  border-top:1px solid rgba(255,255,255,.24);
+  border-bottom:1px solid rgba(255,255,255,.24);
+  text-align:center;
+}
+
+.hero h1{
+  font-family:var(--disp);
+  font-weight:500;
+  font-size:30px;
+  line-height:1.1;
+  letter-spacing:-.015em;
+  margin:16px 0 0;
+  max-width:none;
+  text-align:center;
+}
+
+.hero h1 em{
+  font-style:normal;
+  font-weight:800;
+  color:#f6a62d;
+  text-transform:uppercase;
+}
+
+.hero .lede{
+  font-size:14px;
+  color:#d9cdee;
+  margin:15px auto 0;
+  max-width:36ch;
+  text-align:center;
+}
+
+.chips{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:8px;
+  margin-top:18px;
+}
+
+.chips i{
+  font-style:normal;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-family:var(--body);
+  font-weight:500;
+  font-size:11.5px;
+  color:#efe6ff;
+  background:rgba(255,255,255,.10);
+  border:1px solid rgba(255,255,255,.16);
+  padding:6px 11px;
+  border-radius:999px;
+  backdrop-filter:blur(2px);
+}
+
+/* ---------- Feuille crème ---------- */
+
+.sheet{
+  position:relative;
+  z-index:3;
+  margin-top:-54px;
+  background:var(--cream);
+  border-radius:30px 30px 0 0;
+  padding:8px 22px 26px;
+  box-shadow:0 -16px 36px -18px rgba(26,8,51,.4);
+}
+
+.sheet .grab{
+  width:40px;
+  height:4px;
+  border-radius:3px;
+  background:#e2d7e9;
+  margin:0 auto 16px;
+}
+
+.sheet-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  margin-bottom:4px;
+}
+
+.sheet-head h2{
+  font-family:var(--disp);
+  font-weight:500;
+  font-size:19px;
+  margin:0;
+  letter-spacing:-.01em;
+  color:var(--ink);
+}
+
+.sheet-head .lead{
+  font-size:12.5px;
+  color:var(--muted);
+  margin:5px 0 0;
+  max-width:24ch;
+}
+
+/* anneau de progression */
+
+.ring{
+  position:relative;
+  width:50px;
+  height:50px;
+  flex:none;
+}
+
+.ring svg{
+  transform:rotate(-90deg);
+}
+
+.ring .track{
+  stroke:#e7dcef;
+  stroke-width:5;
+  fill:none;
+}
+
+.ring .bar{
+  stroke:url(#grad);
+  stroke-width:5;
+  fill:none;
+  stroke-linecap:round;
+  stroke-dasharray:138;
+  stroke-dashoffset:138;
+  transition:stroke-dashoffset .5s cubic-bezier(.4,.9,.3,1);
+}
+
+.ring .lbl{
+  position:absolute;
+  inset:0;
+  display:grid;
+  place-items:center;
+  font-family:var(--disp);
+  font-weight:600;
+  font-size:13px;
+  color:var(--violet-600);
+}
+
+.ring.done .lbl{
+  color:var(--green);
+  font-size:16px;
+}
+
+/* lignes conditions */
+
+.list{
+  margin:20px 0 6px;
+}
+
+.opt{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  background:#fff;
+  border:1.5px solid #efe6f3;
+  border-radius:18px;
+  padding:15px 16px;
+  margin-bottom:11px;
+  cursor:pointer;
+  transition:.22s;
+}
+
+.opt:active{
+  transform:scale(.99);
+}
+
+.opt.on{
+  border-color:#bfe7d5;
+  background:linear-gradient(0deg,#f2fbf6,#fff);
+}
+
+.opt .mark{
+  width:26px;
+  height:26px;
+  border-radius:50%;
+  border:2px solid #cdbfe0;
+  flex:none;
+  display:grid;
+  place-items:center;
+  transition:.2s;
+  background:#fff;
+}
+
+.opt .mark svg{
+  width:14px;
+  height:14px;
+  stroke:#fff;
+  stroke-width:3.2;
+  fill:none;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-dasharray:22;
+  stroke-dashoffset:22;
+  transition:.26s .04s;
+}
+
+.opt.on .mark{
+  border-color:var(--green);
+  background:var(--green);
+}
+
+.opt.on .mark svg{
+  stroke-dashoffset:0;
+}
+
+.opt .txt{
+  display:block;
+  flex:1;
+  font-size:14px;
+  font-weight:500;
+  color:var(--ink);
+  text-align:left;
+}
+
+.opt .sub{
+  display:block;
+  font-size:11.5px;
+  font-weight:400;
+  color:var(--muted);
+  margin-top:1px;
+  text-align:left;
+}
+
+/* RGPD checkbox */
+
+.rgpd{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:flex-start;
+  gap:13px;
+  border-top:1px solid var(--line);
+  margin-top:8px;
+  padding-top:16px;
+  cursor:pointer;
+}
+
+.rgpd .mark{
+  width:24px;
+  height:24px;
+  border-radius:7px;
+  border:2px solid #cdbfe0;
+  flex:none;
+  display:grid;
+  place-items:center;
+  transition:.2s;
+  background:#fff;
+  margin-top:1px;
+}
+
+.rgpd .mark svg{
+  width:13px;
+  height:13px;
+  stroke:#fff;
+  stroke-width:3.2;
+  fill:none;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-dasharray:22;
+  stroke-dashoffset:22;
+  transition:.26s;
+}
+
+.rgpd.on .mark{
+  border-color:var(--violet-600);
+  background:var(--violet-600);
+}
+
+.rgpd.on .mark svg{
+  stroke-dashoffset:0;
+}
+
+.rgpd .txt{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:12px;
+  align-items:center;
+  font-size:12.5px;
+  color:#52466b;
+  line-height:1.45;
+  min-width:0;
+}
+
+.rgpd .txt a{
+  display:grid;
+  place-items:center;
+  width:auto;
+  min-width:112px;
+  height:34px;
+  margin:0;
+  padding:0 12px;
+  border-radius:999px;
+  color:#fff;
+  background:linear-gradient(145deg,var(--amber),var(--amber-d));
+  font-size:12px;
+  font-weight:800;
+  text-decoration:none;
+  box-shadow:0 12px 22px -16px rgba(194,102,10,.85);
+}
+
+/* CTA */
+
+.cta-wrap{
+  margin-top:20px;
+}
+
+.cta{
+  position:relative;
+  width:100%;
+  border:0;
+  border-radius:18px;
+  padding:17px;
+  cursor:pointer;
+  font-family:var(--body);
+  font-weight:600;
+  font-size:16px;
+  color:#7a6f8c;
+  background:#ece3f1;
+  letter-spacing:.005em;
+  transition:.3s;
+  overflow:hidden;
+}
+
+.cta .arr{
+  display:inline-block;
+  transition:transform .3s;
+  margin-left:6px;
+}
+
+.cta:disabled{
+  cursor:not-allowed;
+}
+
+.cta.ready{
+  color:#fff;
+  background:linear-gradient(100deg,var(--amber) 0%,var(--amber-d) 60%,var(--amber-deep) 100%);
+  box-shadow:
+    0 16px 30px -12px rgba(221,125,18,.7),
+    0 0 0 1px rgba(221,125,18,.2) inset;
+}
+
+.cta.ready .arr{
+  transform:translateX(4px);
+}
+
+.cta.ready::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-60%;
+  width:40%;
+  height:100%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);
+  animation:sheen 2.6s ease-in-out infinite;
+}
+
+@keyframes sheen{
+  0%{left:-60%}
+  55%,100%{left:130%}
+}
+
+.safe{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  font-size:11.5px;
+  color:var(--muted);
+  margin-top:13px;
+}
+
+.safe svg{
+  width:13px;
+  height:13px;
+  stroke:var(--green);
+  fill:none;
+  stroke-width:2;
+}
+
+/* ---------- Questionnaire ---------- */
+
+.questionnaire{
+  min-height:100%;
+  background:var(--cream);
+  color:var(--ink);
+}
+
+.q-hero{
+  position:relative;
+  overflow:hidden;
+  color:#fff;
+  padding:28px 24px 34px;
+  background:
+    radial-gradient(520px 260px at 12% 0%, rgba(185,140,255,.52), transparent 60%),
+    radial-gradient(420px 240px at 100% 20%, rgba(243,170,69,.36), transparent 58%),
+    linear-gradient(165deg,#3a0f72 0%, #270b4d 58%, #1a0833 100%);
+}
+
+.q-kicker{
+  display:block;
+  width:max-content;
+  min-width:min(100%, 280px);
+  max-width:100%;
+  color:#f6cd8f;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  text-align:center;
+  margin:24px auto 0;
+  padding:10px 0;
+  border-top:1px solid rgba(255,255,255,.24);
+  border-bottom:1px solid rgba(255,255,255,.24);
+}
+
+.q-hero h2{
+  font-family:var(--disp);
+  font-weight:500;
+  font-size:28px;
+  line-height:1.1;
+  text-align:center;
+  margin:12px 0 0;
+}
+
+.q-content{
+  padding:20px 18px 28px;
+}
+
+.q-card,
+.likert-card{
+  background:#fff;
+  border:1.5px solid #efe6f3;
+  border-radius:18px;
+  padding:16px;
+  box-shadow:0 14px 34px -26px rgba(58,15,114,.42);
+}
+
+.q-card h3,
+.likert-card h3{
+  margin:0 0 8px;
+  font-size:15px;
+  line-height:1.28;
+  color:var(--violet-800);
+}
+
+.q-card p,
+.likert-card p{
+  margin:0;
+  color:#625672;
+  font-size:12.8px;
+  line-height:1.5;
+  text-align:justify;
+  text-align-last:left;
+}
+
+.code-input{
+  margin-top:14px;
+  width:100%;
+  border:1.5px solid #e3d7ed;
+  border-radius:15px;
+  padding:14px 15px;
+  font-family:var(--body);
+  font-weight:700;
+  font-size:18px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  text-align:center;
+  color:var(--violet-800);
+  background:#fbf8fd;
+}
+
+.code-input:focus{
+  outline:3px solid rgba(243,170,69,.32);
+  border-color:var(--amber);
+}
+
+.likert-intro{
+  margin-top:14px;
+  position:relative;
+  overflow:hidden;
+  border:0;
+  border-radius:22px 8px 22px 8px;
+  padding:18px 17px 16px;
+  color:#fff;
+  background:
+    radial-gradient(260px 120px at 100% 0%, rgba(243,170,69,.38), transparent 62%),
+    linear-gradient(145deg,var(--violet-800),var(--violet-600));
+  box-shadow:0 18px 36px -24px rgba(58,15,114,.75);
+}
+
+.likert-intro::before{
+  content:"";
+  position:absolute;
+  left:17px;
+  top:17px;
+  width:34px;
+  height:3px;
+  border-radius:999px;
+  background:var(--amber);
+}
+
+.likert-intro h3,
+.likert-intro p,
+.likert-intro .scale-legend{
+  position:relative;
+  z-index:1;
+}
+
+.likert-intro h3{
+  color:#fff;
+  margin-top:10px;
+  text-align:center;
+}
+
+.likert-intro p{
+  color:#eadff6;
+  text-align:justify;
+  text-align-last:left;
+}
+
+.scale-legend{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:min(760px, 100%);
+  margin:18px auto 0;
+  padding:14px;
+  border:1px solid rgba(243,170,69,.34);
+  border-radius:22px;
+  color:#6a5d75;
+  background:rgba(255,248,238,.94);
+  text-align:center;
+}
+
+.scale-legend span{
+  display:inline-flex;
+}
+
+.scale-legend .scale-end{
+  flex:1 1 120px;
+  justify-content:center;
+  max-width:130px;
+  color:#6b6273;
+  font-size:12px;
+  font-weight:800;
+  line-height:1.15;
+}
+
+.scale-legend .scale-points{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+  width:100%;
+}
+
+.scale-legend .scale-point{
+  display:grid;
+  justify-items:center;
+  align-content:start;
+  gap:7px;
+  flex:1 1 92px;
+  min-width:82px;
+}
+
+.scale-legend .scale-dot{
+  width:44px;
+  height:44px;
+  display:grid;
+  place-items:center;
+  border:2px solid rgba(194,102,10,.22);
+  border-radius:50%;
+  color:#3a220b;
+  background:#f3aa45;
+  box-shadow:none;
+  font-size:17px;
+  font-weight:800;
+}
+
+.scale-legend .scale-label{
+  display:block;
+  color:#625672;
+  font-size:11px;
+  font-weight:800;
+  line-height:1.16;
+}
+
+.likert-list{
+  display:grid;
+  gap:12px;
+  margin-top:14px;
+  animation:pageRise .34s cubic-bezier(.2,.75,.25,1);
+}
+
+.likert-item{
+  background:#fff;
+  border:1.5px solid #efe6f3;
+  border-radius:18px;
+  padding:14px;
+  box-shadow:0 10px 26px -24px rgba(58,15,114,.52);
+  transition:transform .2s, border-color .2s, box-shadow .2s;
+}
+
+.likert-item:focus-within{
+  border-color:rgba(106,43,198,.42);
+  box-shadow:0 16px 30px -24px rgba(58,15,114,.72);
+  transform:translateY(-1px);
+}
+
+.likert-item p{
+  margin:0 0 12px;
+  color:var(--ink);
+  font-size:13px;
+  font-weight:500;
+  line-height:1.42;
+}
+
+.likert-scale{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:7px;
+}
+
+.likert-scale label{
+  position:relative;
+  display:grid;
+  place-items:center;
+  min-height:38px;
+  border:1.5px solid #e8dff0;
+  border-radius:13px;
+  color:#675a77;
+  font-size:12.5px;
+  font-weight:700;
+  cursor:pointer;
+  background:#fbf8fd;
+  transition:transform .18s, border-color .18s, background .18s, color .18s, box-shadow .18s;
+}
+
+.likert-scale label:hover{
+  transform:translateY(-1px);
+  border-color:rgba(106,43,198,.34);
+}
+
+.likert-scale input{
+  position:absolute;
+  opacity:0;
+  pointer-events:none;
+}
+
+.likert-scale label:has(input:checked){
+  color:#fff;
+  border-color:var(--violet-600);
+  background:linear-gradient(145deg,var(--violet-600),var(--violet-800));
+  box-shadow:0 10px 22px -14px rgba(58,15,114,.75);
+  transform:translateY(-2px);
+}
+
+.q-submit{
+  margin-top:12px;
+}
+
+.q-nav{
+  display:grid;
+  grid-template-columns:1fr;
+  margin-top:12px;
+}
+
+.q-nav .cta{
+  margin:0;
+  padding:14px;
+  font-size:14px;
+}
+
+.q-page-status{
+  position:relative;
+  height:5px;
+  margin-top:10px;
+  border-radius:999px;
+  overflow:hidden;
+  background:#f0e8f5;
+}
+
+.q-page-status span{
+  display:block;
+  width:0;
+  height:100%;
+  border-radius:inherit;
+  background:linear-gradient(100deg,var(--amber),var(--amber-d));
+  transition:width .34s cubic-bezier(.2,.75,.25,1);
+}
+
+@keyframes pageRise{
+  from{
+    opacity:.35;
+    transform:translateY(8px);
+  }
+  to{
+    opacity:1;
+    transform:none;
+  }
+}
+
+/* ---------- Classement des motivations ---------- */
+
+.priority-message{
+  position:relative;
+  overflow:hidden;
+  border:0;
+  min-height:calc(100dvh - 34px);
+  display:grid;
+  place-items:center;
+  padding:32px 18px;
+  color:#fff;
+  background:
+    radial-gradient(520px 280px at 12% 8%, rgba(243,170,69,.34), transparent 62%),
+    radial-gradient(560px 320px at 105% 18%, rgba(185,140,255,.38), transparent 62%),
+    linear-gradient(155deg,var(--plum-950) 0%, var(--violet-800) 54%, var(--violet-600) 100%);
+}
+
+.priority-message::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  opacity:.42;
+  mix-blend-mode:soft-light;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.priority-message-inner{
+  position:relative;
+  z-index:1;
+  width:min(680px, 100%);
+  text-align:center;
+}
+
+.priority-message-mark{
+  width:56px;
+  height:5px;
+  margin:0 auto 22px;
+  border-radius:999px;
+  background:linear-gradient(90deg,var(--amber),#f8d39a);
+  box-shadow:0 10px 24px -12px rgba(243,170,69,.9);
+}
+
+.priority-message h3{
+  margin:0 0 14px;
+  color:#fff;
+  font-family:var(--disp);
+  font-size:34px;
+  font-weight:500;
+  line-height:1.06;
+}
+
+.wiggle-title{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:.04em;
+}
+
+.wiggle-title span{
+  display:inline-block;
+  transform-origin:50% 78%;
+  animation:letterWiggle var(--dur, .58s) ease-in-out infinite;
+  animation-delay:var(--delay, 0s);
+}
+
+.wiggle-title .space{
+  width:.32em;
+}
+
+.wave-title{
+  display:inline-flex;
+  flex-wrap:nowrap;
+  justify-content:center;
+  gap:.02em;
+  max-width:100%;
+  white-space:nowrap;
+  font-size:clamp(25px, 7.4vw, 34px);
+}
+
+.wave-title span{
+  display:inline-block;
+  animation:titleWave 1.45s ease-in-out infinite;
+  animation-delay:calc(var(--i) * .055s);
+}
+
+.wave-title .space{
+  width:.28em;
+}
+
+@keyframes titleWave{
+  0%,100%{
+    transform:translateY(0) rotate(0deg);
+  }
+  22%{
+    transform:translateY(-9px) rotate(-1.8deg);
+  }
+  48%{
+    transform:translateY(4px) rotate(1.4deg);
+  }
+  72%{
+    transform:translateY(-3px) rotate(-.8deg);
+  }
+}
+
+@keyframes letterWiggle{
+  0%,100%{
+    transform:rotate(0deg);
+  }
+  18%{
+    transform:rotate(var(--r1, -4deg));
+  }
+  43%{
+    transform:rotate(var(--r2, 4deg));
+  }
+  68%{
+    transform:rotate(calc(var(--r1, -4deg) * .58));
+  }
+  86%{
+    transform:rotate(calc(var(--r2, 4deg) * -.36));
+  }
+}
+
+.priority-message p{
+  margin:0;
+  color:#f0e6fb;
+  font-size:15px;
+  line-height:1.62;
+}
+
+.priority-message .cta{
+  margin-top:30px;
+  width:min(180px, 100%);
+  box-shadow:0 18px 34px -22px rgba(0,0,0,.55);
+}
+
+.priority-instructions{
+  margin-top:14px;
+}
+
+.priority-count{
+  position:sticky;
+  top:12px;
+  z-index:6;
+  display:grid;
+  gap:8px;
+  width:min(360px, 33.333%);
+  min-width:260px;
+  margin:12px auto 0;
+  padding:12px 14px;
+  border:1.5px solid rgba(243,170,69,.36);
+  border-radius:16px;
+  color:var(--violet-700);
+  background:rgba(255,248,238,.96);
+  font-size:12px;
+  font-weight:700;
+  text-align:center;
+  box-shadow:0 16px 30px -24px rgba(26,8,51,.6);
+}
+
+.priority-count-text{
+  display:block;
+}
+
+.priority-progress{
+  height:7px;
+  border-radius:999px;
+  overflow:hidden;
+  background:#eadfeb;
+}
+
+.priority-progress span{
+  display:block;
+  width:0;
+  height:100%;
+  border-radius:inherit;
+  background:linear-gradient(90deg,var(--amber),var(--amber-d));
+  transition:width .28s cubic-bezier(.2,.75,.25,1);
+}
+
+.priority-grid,
+.ranked-list{
+  display:grid;
+  gap:10px;
+  margin-top:14px;
+}
+
+.priority-count.complete{
+  position:relative;
+  top:auto;
+}
+
+.priority-grid.complete{
+  grid-template-columns:1fr !important;
+}
+
+.priority-option,
+.ranked-item{
+  width:100%;
+  border:1.5px solid #efe6f3;
+  border-radius:16px;
+  padding:13px 14px;
+  font-family:var(--body);
+  font-size:12.8px;
+  line-height:1.38;
+  text-align:left;
+  color:var(--ink);
+  background:#fff;
+  cursor:pointer;
+  transition:transform .18s, border-color .18s, background .18s, box-shadow .18s;
+}
+
+.priority-option:hover{
+  transform:translateY(-1px);
+  border-color:rgba(106,43,198,.34);
+  box-shadow:0 12px 26px -24px rgba(58,15,114,.7);
+}
+
+.priority-option.selected{
+  color:#fff;
+  border-color:var(--violet-600);
+  background:linear-gradient(145deg,var(--violet-600),var(--violet-800));
+  box-shadow:0 14px 28px -20px rgba(58,15,114,.85);
+}
+
+.priority-option.hidden{
+  display:none;
+}
+
+.ranked-list{
+  margin-top:10px;
+}
+
+.ranked-item{
+  display:grid;
+  grid-template-columns:32px 1fr auto;
+  gap:10px;
+  align-items:center;
+  cursor:default;
+  background:#fbf8fd;
+}
+
+.rank-num{
+  width:30px;
+  height:30px;
+  display:grid;
+  place-items:center;
+  border-radius:11px;
+  color:#fff;
+  background:linear-gradient(145deg,var(--amber),var(--amber-d));
+  font-weight:800;
+  font-size:12px;
+}
+
+.rank-actions{
+  display:flex;
+  gap:5px;
+}
+
+.rank-actions button{
+  width:30px;
+  height:30px;
+  border:0;
+  border-radius:10px;
+  color:var(--violet-700);
+  background:#efe6f3;
+  cursor:pointer;
+  font-weight:800;
+}
+
+.rank-actions button:disabled{
+  opacity:.34;
+  cursor:not-allowed;
+}
+
+.final-message{
+  min-height:360px;
+  display:grid;
+  place-items:center;
+  text-align:center;
+}
+
+.final-message h3{
+  margin:0;
+  color:#fff;
+  font-family:var(--disp);
+  font-size:36px;
+  font-weight:500;
+  line-height:1.05;
+}
+
+.compact-scale{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:7px;
+}
+
+.compact-scale label{
+  min-height:42px;
+  font-size:12.5px;
+}
+
+.scale-help{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:min(760px, 100%);
+  margin:18px auto 0;
+  padding:14px;
+  border:1px solid rgba(243,170,69,.34);
+  border-radius:22px;
+  color:#6a5d75;
+  background:rgba(255,248,238,.94);
+  text-align:center;
+}
+
+.scale-help span{
+  display:inline-flex;
+}
+
+.scale-help .scale-end{
+  flex:1 1 120px;
+  justify-content:center;
+  max-width:140px;
+  color:#6b6273;
+  font-size:12px;
+  font-weight:800;
+  line-height:1.15;
+}
+
+.scale-help .scale-points{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+  width:100%;
+}
+
+.scale-help .scale-point{
+  display:grid;
+  justify-items:center;
+  align-content:start;
+  gap:7px;
+  flex:1 1 104px;
+  min-width:92px;
+}
+
+.scale-help .scale-dot{
+  width:44px;
+  height:44px;
+  display:grid;
+  place-items:center;
+  border:2px solid rgba(194,102,10,.22);
+  border-radius:50%;
+  color:#3a220b;
+  background:#f3aa45;
+  box-shadow:none;
+  font-size:17px;
+  font-weight:800;
+}
+
+.scale-help .scale-label{
+  display:block;
+  color:#625672;
+  font-size:11px;
+  font-weight:800;
+  line-height:1.16;
+}
+
+@media (max-width:560px){
+  .rgpd .txt{
+    grid-template-columns:1fr;
+  }
+
+  .rgpd .txt a{
+    justify-self:start;
+  }
+
+  .priority-message{
+    min-height:100dvh;
+    padding:24px 18px;
+  }
+
+  .priority-message-inner{
+    width:min(100%, 420px);
+    overflow:hidden;
+  }
+
+  .priority-message-mark{
+    margin-bottom:18px;
+  }
+
+  .priority-message h3{
+    font-size:clamp(21px, 5.9vw, 28px);
+  }
+
+  .priority-message h3.wave-title{
+    width:100%;
+    font-size:clamp(20px, 5.3vw, 27px);
+    gap:0;
+    justify-content:center;
+  }
+
+  .wave-title .space{
+    width:.2em;
+  }
+
+  .priority-message p{
+    font-size:14px;
+  }
+
+  .priority-message .cta{
+    margin-top:24px;
+    width:min(160px, 46%);
+    padding-inline:18px;
+  }
+
+  .scale-legend,
+  .scale-help{
+    width:100%;
+    overflow-x:auto;
+    justify-content:flex-start;
+    border-radius:20px;
+    padding:10px;
+    scrollbar-width:none;
+  }
+
+  .scale-legend::-webkit-scrollbar,
+  .scale-help::-webkit-scrollbar{
+    display:none;
+  }
+
+  .scale-legend .scale-points,
+  .scale-help .scale-points{
+    flex-wrap:nowrap;
+    justify-content:space-between;
+    gap:6px;
+    width:100%;
+    min-width:0;
+  }
+
+  .scale-legend .scale-point,
+  .scale-help .scale-point{
+    flex:1 1 0;
+    min-width:0;
+  }
+
+  .scale-legend .scale-dot,
+  .scale-help .scale-dot{
+    width:38px;
+    height:38px;
+    font-size:15px;
+  }
+
+  .scale-legend .scale-label,
+  .scale-help .scale-label{
+    font-size:10px;
+  }
+}
+
+.scale-question{
+  margin-top:12px !important;
+  padding-top:12px;
+  border-top:1px solid rgba(255,255,255,.18);
+  color:#fff !important;
+  font-weight:600;
+}
+
+.demo-field{
+  display:grid;
+  gap:9px;
+  margin-top:13px;
+}
+
+.demo-field label{
+  color:var(--ink);
+  font-size:13px;
+  font-weight:700;
+}
+
+.demo-field input{
+  width:100%;
+  border:1.5px solid #e3d7ed;
+  border-radius:16px;
+  padding:14px;
+  color:var(--violet-800);
+  background:linear-gradient(145deg,#fff,#fbf8fd);
+  font-family:var(--body);
+  font-size:13px;
+  font-weight:600;
+  box-shadow:0 12px 28px -24px rgba(58,15,114,.5);
+}
+
+.demo-field input:focus{
+  outline:3px solid rgba(243,170,69,.32);
+  border-color:var(--amber);
+}
+
+.demo-other{
+  display:none;
+  margin-top:10px;
+}
+
+.demo-other.show{
+  display:block;
+}
+
+.demo-other input{
+  width:100%;
+  min-height:49px;
+  border:1.5px solid #e3d7ed;
+  border-radius:16px;
+  padding:13px 14px;
+  color:var(--violet-800);
+  background:#fff;
+  font-family:var(--body);
+  font-size:13px;
+  font-weight:600;
+}
+
+.pretty-select{
+  position:relative;
+}
+
+.pretty-select-btn{
+  width:100%;
+  min-height:49px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  border:1.5px solid #e3d7ed;
+  border-radius:16px;
+  padding:13px 14px;
+  color:var(--violet-800);
+  background:linear-gradient(145deg,#fff,#fbf8fd);
+  font-family:var(--body);
+  font-size:13px;
+  font-weight:700;
+  text-align:left;
+  cursor:pointer;
+  box-shadow:0 12px 28px -24px rgba(58,15,114,.5);
+  transition:border-color .18s, box-shadow .18s, transform .18s;
+}
+
+.pretty-select-btn::after{
+  content:"";
+  width:9px;
+  height:9px;
+  border-right:2px solid var(--violet-600);
+  border-bottom:2px solid var(--violet-600);
+  transform:rotate(45deg) translateY(-2px);
+  transition:transform .18s;
+  flex:none;
+}
+
+.pretty-select.open .pretty-select-btn{
+  border-color:var(--amber);
+  box-shadow:0 18px 34px -24px rgba(58,15,114,.68);
+}
+
+.pretty-select.open .pretty-select-btn::after{
+  transform:rotate(225deg) translate(-2px,-1px);
+}
+
+.pretty-options{
+  position:absolute;
+  left:0;
+  right:0;
+  top:calc(100% + 7px);
+  z-index:12;
+  display:none;
+  max-height:250px;
+  overflow:auto;
+  padding:7px;
+  border:1.5px solid #efe6f3;
+  border-radius:16px;
+  background:#fff;
+  box-shadow:0 22px 46px -26px rgba(26,8,51,.75);
+}
+
+.pretty-select.open .pretty-options{
+  display:grid;
+  gap:5px;
+}
+
+.pretty-options button{
+  border:0;
+  border-radius:12px;
+  padding:10px 11px;
+  color:var(--ink);
+  background:transparent;
+  font-family:var(--body);
+  font-size:12.5px;
+  font-weight:600;
+  text-align:left;
+  cursor:pointer;
+}
+
+.pretty-options button:hover,
+.pretty-options button.selected{
+  color:#fff;
+  background:linear-gradient(145deg,var(--violet-600),var(--violet-800));
+}
+
+.age-picker{
+  display:grid;
+  grid-template-columns:82px 1fr;
+  gap:16px;
+  align-items:center;
+  margin-top:10px;
+  padding:14px;
+  border:1.5px solid #efe6f3;
+  border-radius:18px;
+  background:linear-gradient(145deg,#fff,#fbf8fd);
+  transition:transform .2s, box-shadow .2s, border-color .2s, padding .2s;
+}
+
+.age-picker.zoom{
+  position:relative;
+  z-index:20;
+  grid-template-columns:100px 1fr;
+  padding:20px 16px;
+  border-color:var(--amber);
+  transform:scale(1.08);
+  box-shadow:0 28px 60px -28px rgba(26,8,51,.78);
+}
+
+.age-value{
+  display:grid;
+  place-items:center;
+  min-height:74px;
+  border-radius:20px 8px 20px 8px;
+  color:#fff;
+  background:linear-gradient(145deg,var(--violet-600),var(--violet-800));
+  font-family:var(--disp);
+  font-size:30px;
+  font-weight:600;
+  transition:min-height .2s, font-size .2s;
+}
+
+.age-picker.zoom .age-value{
+  min-height:96px;
+  font-size:40px;
+}
+
+.age-slider-wrap{
+  display:grid;
+  grid-template-columns:36px 1fr;
+  gap:10px;
+  align-items:center;
+  min-height:160px;
+}
+
+.age-slider{
+  width:170px;
+  accent-color:var(--amber);
+  transform:rotate(-90deg);
+  transform-origin:center;
+  cursor:pointer;
+  transition:width .2s;
+  touch-action:none;
+}
+
+.age-picker.zoom .age-slider{
+  width:230px;
+}
+
+.age-hint{
+  color:#756985;
+  font-size:11.5px;
+  line-height:1.35;
+}
+
+.creator-jump{
+  position:absolute;
+  right:14px;
+  top:14px;
+  z-index:7;
+  border:0;
+  border-radius:999px;
+  padding:8px 11px;
+  color:#fff;
+  background:rgba(26,8,51,.72);
+  font-family:var(--body);
+  font-size:11px;
+  font-weight:700;
+  cursor:pointer;
+  backdrop-filter:blur(6px);
+}
+
+.creator-panel{
+  position:absolute;
+  right:14px;
+  top:52px;
+  z-index:7;
+  width:220px;
+  max-height:68%;
+  overflow:auto;
+  display:none;
+  gap:7px;
+  padding:10px;
+  border-radius:16px;
+  background:#fff;
+  box-shadow:0 20px 44px -24px rgba(26,8,51,.72);
+}
+
+.creator-panel.open{
+  display:grid;
+}
+
+.creator-panel button{
+  border:1px solid #efe6f3;
+  border-radius:11px;
+  padding:9px 10px;
+  color:var(--violet-800);
+  background:#fbf8fd;
+  font-family:var(--body);
+  font-size:12px;
+  font-weight:700;
+  text-align:left;
+  cursor:pointer;
+}
+
+.creator-panel button:hover{
+  border-color:var(--amber);
+  background:#fff7eb;
+}
+
+/* ---------- Bottom sheet RGPD complète ---------- */
+
+.back{
+  position:absolute;
+  inset:0;
+  background:rgba(20,8,40,.5);
+  opacity:0;
+  pointer-events:none;
+  transition:.3s;
+  z-index:8;
+}
+
+.back.open{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.info{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:9;
+  background:#fff;
+  border-radius:26px 26px 0 0;
+  transform:translateY(102%);
+  transition:.36s cubic-bezier(.25,.8,.3,1);
+  max-height:86%;
+  overflow-y:auto;
+  scrollbar-width:none;
+}
+
+.info::-webkit-scrollbar{
+  display:none;
+}
+
+.info.open{
+  transform:translateY(0);
+}
+
+.info .grab{
+  width:42px;
+  height:4px;
+  border-radius:3px;
+  background:#e2d7e9;
+  margin:14px auto 16px;
+}
+
+.rgpd-sheet{
+  padding:0 18px 22px;
+}
+
+.rgpd-head{
+  position:sticky;
+  top:0;
+  z-index:2;
+  background:linear-gradient(180deg,#fff 82%,rgba(255,255,255,0));
+  padding:0 4px 16px;
+}
+
+.rgpd-kicker{
+  display:inline-flex;
+  align-items:center;
+  min-height:28px;
+  padding:0 10px;
+  border-radius:999px;
+  background:#f3ebdf;
+  color:var(--amber-deep);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+
+.info h3{
+  font-family:var(--disp);
+  font-weight:500;
+  font-size:22px;
+  line-height:1.12;
+  margin:0 0 10px;
+  color:var(--violet-800);
+  letter-spacing:-.02em;
+}
+
+.rgpd-head p{
+  margin:0;
+  color:#625672;
+  font-size:12.8px;
+  line-height:1.55;
+}
+
+.rgpd-content{
+  display:grid;
+  gap:12px;
+  padding:2px 0 18px;
+}
+
+.rgpd-block{
+  display:grid;
+  grid-template-columns:30px 1fr;
+  gap:12px;
+  padding:14px;
+  background:#fbf8fd;
+  border:1px solid #efe6f3;
+  border-radius:18px;
+}
+
+.rgpd-num{
+  width:30px;
+  height:30px;
+  border-radius:11px;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(150deg,var(--violet-600),var(--violet-800));
+  color:#fff;
+  font-family:var(--disp);
+  font-weight:600;
+  font-size:14px;
+}
+
+.rgpd-block h4,
+.rgpd-consent-box h4{
+  margin:0 0 6px;
+  color:var(--ink);
+  font-size:13.5px;
+  line-height:1.25;
+}
+
+.rgpd-block p,
+.rgpd-consent-box p{
+  margin:0 0 8px;
+  color:#52466b;
+  font-size:12.2px;
+  line-height:1.52;
+}
+
+.rgpd-block p:last-child,
+.rgpd-consent-box p:last-child{
+  margin-bottom:0;
+}
+
+.rgpd-mail{
+  display:inline-flex;
+  margin-top:2px;
+  color:var(--violet-600);
+  font-size:12.2px;
+  font-weight:600;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+
+.rgpd-rights ul{
+  margin:8px 0 10px;
+  padding:0;
+  list-style:none;
+  display:grid;
+  gap:7px;
+}
+
+.rgpd-rights li{
+  position:relative;
+  padding-left:18px;
+  color:#52466b;
+  font-size:12.1px;
+  line-height:1.42;
+}
+
+.rgpd-rights li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:.55em;
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--amber);
+}
+
+.rgpd-consent-box{
+  padding:16px;
+  border-radius:20px;
+  background:linear-gradient(160deg,#fff7eb,#f7efff);
+  border:1.5px solid rgba(243,170,69,.38);
+}
+
+.rgpd-consent-box h4{
+  color:var(--violet-800);
+  font-size:15px;
+}
+
+.rgpd-warning{
+  margin-top:10px !important;
+  padding:10px 12px;
+  border-radius:14px;
+  background:rgba(221,125,18,.1);
+  color:#8a4806 !important;
+  font-weight:600;
+}
+
+.info .close{
+  position:sticky;
+  bottom:0;
+  margin-top:4px;
+  width:100%;
+  border:0;
+  border-radius:16px;
+  padding:15px;
+  font-family:var(--body);
+  font-weight:700;
+  font-size:14px;
+  color:#fff;
+  background:linear-gradient(100deg,var(--amber),var(--amber-d),var(--amber-deep));
+  cursor:pointer;
+  box-shadow:0 14px 28px -14px rgba(221,125,18,.75);
+}
+
+/* entrée animée */
+
+.anim{
+  opacity:0;
+  transform:translateY(14px);
+  animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards;
+}
+
+.d1{animation-delay:.05s}
+.d2{animation-delay:.16s}
+.d3{animation-delay:.27s}
+.d4{animation-delay:.38s}
+
+@keyframes rise{
+  to{
+    opacity:1;
+    transform:none;
+  }
+}
+
+/* toast */
+
+.toast{
+  position:absolute;
+  left:20px;
+  right:20px;
+  bottom:22px;
+  z-index:10;
+  background:#19102b;
+  color:#fff;
+  font-weight:500;
+  font-size:13px;
+  padding:14px 16px;
+  border-radius:15px;
+  display:flex;
+  gap:9px;
+  align-items:center;
+  opacity:0;
+  transform:translateY(12px);
+  transition:.32s;
+  box-shadow:0 16px 32px -10px rgba(0,0,0,.5);
+}
+
+.toast.show{
+  opacity:1;
+  transform:none;
+}
+
+.toast b{
+  color:var(--amber);
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{
+    animation:none!important;
+    transition:none!important;
+  }
+}
+
+@media (min-width:900px){
+  body{
+    padding:32px;
+  }
+
+  .stage{
+    width:100%;
+  }
+
+  .phone{
+    width:min(1280px, calc(100vw - 64px));
+    height:min(940px, calc(100vh - 64px));
+  }
+
+  .scr{
+    border-radius:28px;
+    box-shadow:
+      0 34px 90px -48px rgba(26,8,51,.72),
+      0 0 0 1px rgba(106,43,198,.08);
+  }
+
+  .body{
+    scrollbar-width:thin;
+    scrollbar-color:rgba(106,43,198,.35) transparent;
+  }
+
+  .body::-webkit-scrollbar{
+    display:block;
+    width:10px;
+  }
+
+  .body::-webkit-scrollbar-thumb{
+    background:rgba(106,43,198,.28);
+    border-radius:999px;
+    border:3px solid transparent;
+    background-clip:content-box;
+  }
+
+  .hero{
+    min-height:430px;
+    display:grid;
+    align-content:center;
+    padding:56px 120px 130px;
+  }
+
+  .hero h1{
+    font-size:62px;
+    max-width:16ch;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .hero .lede{
+    max-width:64ch;
+    font-size:19px;
+  }
+
+  .eyebrow{
+    max-width:620px;
+    font-size:12px;
+    padding:13px 0;
+  }
+
+  .sheet{
+    width:min(920px, calc(100% - 80px));
+    margin:-86px auto 0;
+    border-radius:30px;
+    padding:12px 42px 42px;
+  }
+
+  .sheet-head h2{
+    font-size:30px;
+  }
+
+  .sheet-head .lead{
+    font-size:15px;
+  }
+
+  .opt{
+    padding:18px 20px;
+  }
+
+  .opt .txt{
+    font-size:16px;
+  }
+
+  .opt .sub{
+    font-size:13px;
+  }
+
+  .rgpd .txt{
+    font-size:14px;
+  }
+
+  .cta{
+    padding:20px;
+    font-size:18px;
+  }
+
+  .questionnaire{
+    min-height:100%;
+  }
+
+  .q-hero{
+    padding:58px 80px 68px;
+  }
+
+  .q-hero h2{
+    font-size:56px;
+  }
+
+  .q-kicker{
+    font-size:12px;
+    min-width:360px;
+    margin-top:32px;
+  }
+
+  .q-content{
+    width:min(980px, calc(100% - 80px));
+    margin:0 auto;
+    padding:34px 0 52px;
+  }
+
+  .likert-item,
+  .q-card,
+  .likert-card{
+    padding:24px 26px;
+    border-radius:22px;
+  }
+
+  .likert-item{
+    transition:
+      transform .22s cubic-bezier(.2,.75,.25,1),
+      border-color .22s,
+      box-shadow .22s,
+      background .22s;
+  }
+
+  .likert-item:hover{
+    transform:translateY(-4px);
+    border-color:rgba(106,43,198,.46);
+    background:linear-gradient(145deg,#fff,#fbf8ff);
+    box-shadow:
+      0 22px 44px -30px rgba(58,15,114,.76),
+      0 0 0 1px rgba(106,43,198,.12) inset;
+  }
+
+  .q-card h3,
+  .likert-card h3{
+    font-size:19px;
+  }
+
+  .q-card p,
+  .likert-card p{
+    font-size:15px;
+  }
+
+  .likert-item p{
+    font-size:16px;
+  }
+
+  .likert-scale label{
+    min-height:54px;
+    font-size:15px;
+  }
+
+  .scale-legend,
+  .scale-help{
+    max-width:760px;
+  }
+
+  .scale-legend .scale-dot,
+  .scale-help .scale-dot{
+    width:46px;
+    height:46px;
+    font-size:18px;
+  }
+
+  .scale-legend .scale-label,
+  .scale-help .scale-label{
+    font-size:12px;
+  }
+
+  .pretty-select-btn,
+  .demo-field input{
+    min-height:58px;
+    font-size:15px;
+  }
+
+  .pretty-options button{
+    font-size:14px;
+    padding:12px 13px;
+  }
+
+  .age-picker{
+    grid-template-columns:110px 1fr;
+    padding:20px;
+  }
+
+  .age-value{
+    min-height:98px;
+    font-size:42px;
+  }
+
+  .priority-message h3{
+    font-size:50px;
+  }
+
+  .priority-message h3.wave-title{
+    font-size:clamp(34px, 5vw, 50px);
+  }
+
+  .priority-message p{
+    max-width:58ch;
+    margin-inline:auto;
+    font-size:18px;
+  }
+
+  .priority-option,
+  .ranked-item{
+    font-size:15px;
+  }
+
+  .priority-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  .ranked-item{
+    grid-template-columns:34px 1fr auto;
+  }
+
+  .creator-panel{
+    right:24px;
+    top:62px;
+    width:280px;
+  }
+
+  .info{
+    left:50%;
+    right:auto;
+    width:min(760px, calc(100% - 64px));
+    border-radius:28px 28px 0 0;
+    transform:translate(-50%,102%);
+  }
+
+  .info.open{
+    transform:translate(-50%,0);
+  }
+}
+
+.opt:focus-visible,
+.rgpd:focus-visible,
+.cta:focus-visible,
+button:focus-visible{
+  outline:3px solid var(--amber);
+  outline-offset:3px;
+}
+</style>
+
+<div class="stage">
+  <div class="phone">
+    <div class="scr">
+      <button class="creator-jump" id="creatorStart" type="button" hidden>Pages</button>
+      <div class="body">
+
+        <div class="hero">
+          <div class="aurora"></div>
+          <div class="grain"></div>
+
+          <h1 class="anim d1">
+            Et si tout commençait<br>dans la <em>TÊTE</em> ?
+          </h1>
+
+          <div class="eyebrow anim d2">
+            Psychologie & science
+          </div>
+
+          <p class="lede anim d3">
+            Vous allez participer à une étude scientifique qui s'intéresse à la psychologie de la perte de poids en répondant à des questions.
+          </p>
+
+          <div class="chips anim d4">
+            <i>⏱ ≈ 15 min</i>
+            <i>3 parties</i>
+            <i>🔒 Anonyme</i>
+          </div>
+        </div>
+
+        <div class="sheet">
+          <div class="grab"></div>
+
+          <div class="sheet-head">
+            <div>
+              <h2>Avant de commencer</h2>
+              <p class="lead">Vérifiez et confirmez ces quelques points pour participer.</p>
+            </div>
+
+            <div class="ring" id="ring">
+              <svg width="50" height="50" viewBox="0 0 50 50">
+                <defs>
+                  <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#6a2bc6"/>
+                    <stop offset="1" stop-color="#f3aa45"/>
+                  </linearGradient>
+                </defs>
+                <circle class="track" cx="25" cy="25" r="22"/>
+                <circle class="bar" id="bar" cx="25" cy="25" r="22"/>
+              </svg>
+              <div class="lbl" id="ringlbl">0/4</div>
+            </div>
+          </div>
+
+          <div class="list">
+            <div class="opt" data-req tabindex="0" role="checkbox" aria-checked="false">
+              <span class="mark">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 12l5 5L20 6"/>
+                </svg>
+              </span>
+              <span class="txt">J’ai au moins 18 ans</span>
+            </div>
+
+            <div class="opt" data-req tabindex="0" role="checkbox" aria-checked="false">
+              <span class="mark">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 12l5 5L20 6"/>
+                </svg>
+              </span>
+              <span class="txt">
+                Je souhaite perdre du poids
+                <span class="sub">vous avez l’intention d’en perdre</span>
+              </span>
+            </div>
+
+            <div class="opt" data-req tabindex="0" role="checkbox" aria-checked="false">
+              <span class="mark">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 12l5 5L20 6"/>
+                </svg>
+              </span>
+              <span class="txt">
+                Je suis au calme
+                <span class="sub">pour répondre sans être distrait·e</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="rgpd" data-req tabindex="0" role="checkbox" aria-checked="false">
+            <span class="mark">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 12l5 5L20 6"/>
+              </svg>
+            </span>
+
+            <span class="txt">
+              J’ai lu les informations RGPD et j’accepte que mes données soient traitées dans le cadre de cette recherche.
+              <a data-info>En savoir plus</a>
+            </span>
+          </div>
+
+          <div class="cta-wrap">
+            <button class="cta" id="cta" disabled>
+              Commencer le questionnaire
+              <span class="arr">→</span>
+            </button>
+
+            <div class="safe">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3l7 4v5c0 4-3 7-7 8-4-1-7-4-7-8V7z"/>
+              </svg>
+              Vos réponses sont traitées de manière confidentielle.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- feuille RGPD complète -->
+      <div class="back" id="back"></div>
+
+      <div class="info rgpd-sheet" id="info" role="dialog" aria-modal="true" aria-labelledby="rgpd-title">
+        <div class="grab"></div>
+
+        <div class="rgpd-head">
+          <span class="rgpd-kicker">Protection des données</span>
+
+          <h3 id="rgpd-title">
+            Information sur le traitement des données personnelles
+          </h3>
+
+          <p>
+            Dans le cadre de cette recherche en psychologie, nous collectons et traitons certaines de vos données personnelles.
+            Conformément au Règlement Général sur la Protection des Données, nous vous informons sur la manière dont ces données seront utilisées et protégées.
+          </p>
+        </div>
+
+        <div class="rgpd-content">
+
+          <section class="rgpd-block">
+            <div class="rgpd-num">1</div>
+            <div>
+              <h4>Responsable du traitement des données</h4>
+              <p>
+                Le responsable du traitement des données est l’entreprise <strong>Psycho Sapiens</strong>,
+                dirigée par le psychologue <strong>M. Rousseaux</strong>.
+              </p>
+              <a href="mailto:psycho.sapiiens@gmail.com" class="rgpd-mail">
+                psycho.sapiiens@gmail.com
+              </a>
+            </div>
+          </section>
+
+          <section class="rgpd-block">
+            <div class="rgpd-num">2</div>
+            <div>
+              <h4>Finalité de la collecte</h4>
+              <p>
+                Les données collectées dans ce questionnaire seront utilisées dans le cadre d’une recherche
+                sur le bien-être psychologique. Elles permettront de mieux comprendre les perceptions du bien-être
+                selon certains domaines de vie.
+              </p>
+            </div>
+          </section>
+
+          <section class="rgpd-block">
+            <div class="rgpd-num">3</div>
+            <div>
+              <h4>Nature des données collectées</h4>
+              <p>
+                Les données collectées comprennent des données démographiques ainsi que des questionnaires de psychologie.
+                Aucune donnée sensible ne sera collectée sans votre consentement explicite.
+              </p>
+            </div>
+          </section>
+
+          <section class="rgpd-block">
+            <div class="rgpd-num">4</div>
+            <div>
+              <h4>Durée de conservation des données</h4>
+              <p>
+                Vos données seront conservées de manière anonyme et pour une durée indéterminée à compter de la collecte.
+              </p>
+            </div>
+          </section>
+
+          <section class="rgpd-block">
+            <div class="rgpd-num">5</div>
+            <div>
+              <h4>Confidentialité et anonymat</h4>
+              <p>
+                Les réponses que vous fournirez sont anonymes. Vos données personnelles ne seront pas associées
+                à vos réponses dans les rapports ou les publications découlant de cette recherche.
+              </p>
+              <p>
+                Vos informations seront traitées de manière confidentielle et ne seront accessibles qu’aux membres
+                de l’équipe de recherche.
+              </p>
+            </div>
+          </section>
+
+          <section class="rgpd-block">
+            <div class="rgpd-num">6</div>
+            <div>
+              <h4>Base légale du traitement</h4>
+              <p>
+                Le traitement de vos données repose sur votre consentement éclairé.
+                Vous êtes libre de retirer votre consentement à tout moment sans avoir à justifier votre décision.
+              </p>
+            </div>
+          </section>
+
+          <section class="rgpd-block">
+            <div class="rgpd-num">7</div>
+            <div>
+              <h4>Partage des données</h4>
+              <p>
+                Les données ne seront pas partagées avec des tiers sans votre autorisation préalable.
+              </p>
+            </div>
+          </section>
+
+          <section class="rgpd-block rgpd-rights">
+            <div class="rgpd-num">8</div>
+            <div>
+              <h4>Vos droits</h4>
+              <p>
+                Conformément au RGPD, vous disposez des droits suivants :
+              </p>
+
+              <ul>
+                <li>
+                  <strong>Droit d’accès :</strong>
+                  vous avez le droit de savoir quelles données personnelles nous détenons sur vous.
+                </li>
+                <li>
+                  <strong>Droit de rectification :</strong>
+                  vous pouvez demander la correction de toute donnée inexacte.
+                </li>
+                <li>
+                  <strong>Droit à l’effacement :</strong>
+                  vous pouvez demander la suppression de vos données personnelles.
+                </li>
+                <li>
+                  <strong>Droit à la limitation du traitement :</strong>
+                  vous pouvez demander la suspension temporaire du traitement de vos données dans certaines situations.
+                </li>
+                <li>
+                  <strong>Droit à la portabilité :</strong>
+                  vous pouvez demander à recevoir vos données personnelles dans un format structuré et couramment utilisé.
+                </li>
+              </ul>
+
+              <p>
+                Pour exercer ces droits, vous pouvez nous contacter à l’adresse suivante :
+              </p>
+
+              <a href="mailto:psycho.sapiiens@gmail.com" class="rgpd-mail">
+                psycho.sapiiens@gmail.com
+              </a>
+            </div>
+          </section>
+
+          <section class="rgpd-block">
+            <div class="rgpd-num">9</div>
+            <div>
+              <h4>Réclamations</h4>
+              <p>
+                Si vous estimez que vos droits en matière de protection des données ne sont pas respectés,
+                vous pouvez adresser une réclamation à l’autorité de contrôle compétente, la CNIL en France.
+              </p>
+            </div>
+          </section>
+
+          <section class="rgpd-consent-box">
+            <h4>Consentement</h4>
+
+            <p>
+              En cochant la case ci-dessous, vous confirmez avoir lu et compris les informations ci-dessus
+              et donnez votre consentement au traitement de vos données dans le cadre de cette recherche.
+            </p>
+
+            <p>
+              <strong>
+                J’accepte que mes données soient traitées dans le cadre de cette recherche conformément aux termes décrits ci-dessus.
+              </strong>
+            </p>
+
+            <p class="rgpd-warning">
+              Si vous n’acceptez pas, vous ne pourrez pas participer à l’étude.
+            </p>
+          </section>
+
+        </div>
+
+        <button class="close" id="close">
+          J’ai compris
+        </button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+(function(){
+  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyJN9kgT0VgwlKFS2HZyzrk78EWcy1NzXB-tEma5UjHJtDIa5M2dM9snaNud1P_-89N/exec";
+
+  var reqs = [].slice.call(document.querySelectorAll('[data-req]'));
+  var cta = document.getElementById('cta');
+  var bar = document.getElementById('bar');
+  var ringlbl = document.getElementById('ringlbl');
+  var ring = document.getElementById('ring');
+  var total = reqs.length;
+  var C = 138;
+  var creatorMode = false;
+  var homeBodyHtml = document.querySelector('.body').innerHTML;
+
+  var questionnaireData = {
+    timestamp: "",
+    participant_code: "",
+
+    rgpd_accepted: false,
+    age_condition_accepted: false,
+    weight_condition_accepted: false,
+    calm_condition_accepted: false,
+
+    user_agent: navigator.userAgent,
+    page_url: window.location.href,
+
+    motivation_order_json: "",
+
+    priority_rank_1: "",
+    priority_rank_2: "",
+    priority_rank_3: "",
+    priority_rank_4: "",
+    priority_rank_5: "",
+    priority_rank_1_index: "",
+    priority_rank_2_index: "",
+    priority_rank_3_index: "",
+    priority_rank_4_index: "",
+    priority_rank_5_index: "",
+
+    gender: "",
+    csp: "",
+    education: "",
+    age: "",
+    progress_step: ""
+  };
+
+  for(var dataI = 1; dataI <= 75; dataI++){
+    questionnaireData["motivation_" + String(dataI).padStart(2, "0")] = "";
+  }
+
+  for(var dataR = 1; dataR <= 15; dataR++){
+    questionnaireData["priority_item_" + String(dataR).padStart(2, "0")] = 0;
+  }
+
+  for(var dataP = 1; dataP <= 9; dataP++){
+    questionnaireData["phq_" + String(dataP).padStart(2, "0")] = "";
+  }
+
+  for(var dataA = 1; dataA <= 6; dataA++){
+    questionnaireData["anxiety_" + String(dataA).padStart(2, "0")] = "";
+  }
+
+  function showToast(message, type){
+    var t = document.createElement("div");
+    t.className = "toast";
+    t.innerHTML = type === "error"
+      ? "<b>!</b> " + message
+      : "<b>✓</b> " + message;
+
+    document.querySelector(".scr").appendChild(t);
+
+    requestAnimationFrame(function(){
+      t.classList.add("show");
+    });
+
+    setTimeout(function(){
+      t.classList.remove("show");
+      setTimeout(function(){
+        t.remove();
+      }, 320);
+    }, 2800);
+  }
+
+  function recordConsentChecks(){
+    questionnaireData.age_condition_accepted = reqs[0] && reqs[0].classList.contains("on");
+    questionnaireData.weight_condition_accepted = reqs[1] && reqs[1].classList.contains("on");
+    questionnaireData.calm_condition_accepted = reqs[2] && reqs[2].classList.contains("on");
+    questionnaireData.rgpd_accepted = reqs[3] && reqs[3].classList.contains("on");
+  }
+
+  async function sendToGoogleSheet(){
+    if(!/^https?:\/\//.test(GOOGLE_SCRIPT_URL)){
+      throw new Error("URL Google Apps Script non configurée");
+    }
+
+    questionnaireData.timestamp = new Date().toISOString();
+
+    await fetch(GOOGLE_SCRIPT_URL, {
+      method: "POST",
+      mode: "no-cors",
+      body: JSON.stringify(questionnaireData)
+    });
+  }
+
+  function refresh(){
+    var done = reqs.filter(function(r){
+      return r.classList.contains('on');
+    }).length;
+
+    bar.style.strokeDashoffset = C - (C * done / total);
+
+    var ok = done === total;
+
+    ringlbl.textContent = ok ? '✓' : done + '/' + total;
+    ring.classList.toggle('done', ok);
+    cta.classList.toggle('ready', ok);
+    cta.disabled = !ok;
+  }
+
+  function toggle(el){
+    var on = el.classList.toggle('on');
+    el.setAttribute('aria-checked', on);
+    refresh();
+  }
+
+  reqs.forEach(function(el){
+    el.addEventListener('click', function(e){
+      if(e.target.closest('[data-info]')) return;
+      toggle(el);
+    });
+
+    el.addEventListener('keydown', function(e){
+      if(e.key === ' ' || e.key === 'Enter'){
+        e.preventDefault();
+        toggle(el);
+      }
+    });
+  });
+
+  function openInfo(){
+    document.getElementById('info').classList.add('open');
+    document.getElementById('back').classList.add('open');
+  }
+
+  function closeInfo(){
+    document.getElementById('info').classList.remove('open');
+    document.getElementById('back').classList.remove('open');
+  }
+
+  document.querySelectorAll('[data-info]').forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.stopPropagation();
+      openInfo();
+    });
+  });
+
+  document.getElementById('close').addEventListener('click', closeInfo);
+  document.getElementById('back').addEventListener('click', closeInfo);
+
+  function renderHomePage(){
+    var body = document.querySelector('.body');
+    body.innerHTML = homeBodyHtml;
+
+    reqs = [].slice.call(document.querySelectorAll('[data-req]'));
+    cta = document.getElementById('cta');
+    bar = document.getElementById('bar');
+    ringlbl = document.getElementById('ringlbl');
+    ring = document.getElementById('ring');
+    total = reqs.length;
+
+    reqs.forEach(function(el){
+      el.addEventListener('click', function(e){
+        if(e.target.closest('[data-info]')) return;
+        toggle(el);
+      });
+
+      el.addEventListener('keydown', function(e){
+        if(e.key === ' ' || e.key === 'Enter'){
+          e.preventDefault();
+          toggle(el);
+        }
+      });
+    });
+
+    document.querySelectorAll('[data-info]').forEach(function(b){
+      b.addEventListener('click', function(e){
+        e.stopPropagation();
+        openInfo();
+      });
+    });
+
+    document.getElementById('close').addEventListener('click', closeInfo);
+    document.getElementById('back').addEventListener('click', closeInfo);
+
+    cta.addEventListener('click', function(){
+      if(cta.disabled) return;
+      recordConsentChecks();
+      renderQuestionnaire();
+    });
+
+    var creatorStart = document.getElementById('creatorStart');
+    if(creatorStart){
+      creatorStart.hidden = !creatorMode;
+      creatorStart.addEventListener('click', function(){
+        if(!creatorMode) return;
+        renderQuestionnaire();
+        setTimeout(function(){
+          var panel = document.getElementById('creatorPanel');
+          if(panel) panel.classList.add('open');
+        }, 0);
+      });
+    }
+
+    refresh();
+    body.scrollTop = 0;
+  }
+
+  var motivationItems = [
+    "Je veux me sentir plus satisfait de mon apparence.",
+    "Je veux que mon corps corresponde davantage à l’image que j’aimerais avoir de moi.",
+    "Mon apparence actuelle joue un rôle important dans mon envie de perdre du poids.",
+    "Je veux me sentir plus à l’aise lorsque je vois mon corps dans un miroir ou sur une photo.",
+    "Je veux pouvoir porter des vêtements dans lesquels je me sens mieux avec mon apparence.",
+    "Je veux protéger ma santé.",
+    "Je veux réduire les risques de problèmes de santé liés à mon poids.",
+    "Ma santé future est une raison importante de ma démarche de perte de poids.",
+    "Je veux agir maintenant pour éviter que mon état de santé se dégrade.",
+    "Je veux prendre soin de mon corps de manière plus responsable.",
+    "Je veux me sentir plus à l’aise dans mes mouvements physiques.",
+    "Je veux que mon corps me gêne moins dans les activités du quotidien.",
+    "Je veux retrouver une sensation de légèreté dans mon corps.",
+    "Je veux avoir plus d’énergie dans mes déplacements et mes activités.",
+    "Je veux que mon corps soit moins souvent une source de limitation dans ma vie quotidienne.",
+    "Je veux éviter de m’exposer aux jugements physique des autres.",
+    "Je me soucis du jugement que les autres peuvent avoir sur mon corps",
+    "Le regard des autres sur mon poids influence fortement mon envie de changer.",
+    "Je veux me sentir moins mal à l’aise lorsque mon corps est visible.",
+    "Je veux éviter les situations où mon poids pourrait être remarqué ou commenté.",
+    "Pour reprendre le contrôle de mon corps.",
+    "Je veux sentir que je maîtrise davantage mes comportements alimentaires.",
+    "Cette démarche représente pour moi une manière de reprendre les choses en main.",
+    "Je veux me sentir capable de tenir un cap dans ma relation au poids.",
+    "Perdre du poids me donnerait le sentiment de retrouver une maîtrise personnelle.",
+    "Je veux retrouver une version de moi que j’ai l’impression d’avoir perdue.",
+    "Mon poids actuel me donne parfois le sentiment de ne plus être vraiment moi-même.",
+    "Perdre du poids représenterait pour moi une manière de renouer avec mon histoire personnelle.",
+    "Je veux me rapprocher de la personne que je me souviens avoir été.",
+    "J’ai besoin de me reconnaître à nouveau.",
+    "Je veux me sentir plus performant dans mes activités.",
+    "Je veux améliorer mes capacités physiques à travers cette démarche.",
+    "Perdre du poids me donnerait le sentiment d’être plus efficace dans ma vie quotidienne.",
+    "Je veux progresser concrètement dans ma condition physique.",
+    "Cette démarche représente pour moi un moyen de renforcer mon sentiment de compétence.",
+    "j’ai en vue un événement précis.",
+    "Une échéance à venir joue un rôle important dans ma motivation actuelle.",
+    "Je me sens motivé parce que j’ai une date concrète en tête.",
+    "Mon objectif de perte de poids est lié à une période particulière de ma vie.",
+    "Je veux obtenir un changement visible avant une occasion importante pour moi.",
+    "Je veux montrer à certaines personnes qu’elles se trompaient sur moi.",
+    "Cette démarche est aussi une manière de répondre à ceux qui m’ont sous-estimé.",
+    "Réussir à perdre du poids me donnerait le sentiment de reprendre de la valeur aux yeux de certaines personnes.",
+    "Je veux que certains voient que je suis capable de changer.",
+    "Ma motivation est en partie liée au désir de transformer l’image que d’autres ont de moi.",
+    "Je veux devenir une personne qui prend soin d’elle de manière durable.",
+    "Ma démarche de perte de poids est cohérente avec la personne que je veux devenir.",
+    "Je veux construire des habitudes qui correspondent davantage à mes valeurs personnelles.",
+    "Cette démarche représente pour moi une manière de vivre plus en accord avec moi-même.",
+    "Je veux que mes changements deviennent une partie stable de mon mode de vie.",
+    "Un professionnel de santé me l’a recommandé.",
+    "c’est en partie liée à ce que mon médecin m’a dit concernant mon poids.",
+    "Je me sentirais en faute si je ne suivais pas les recommandations médicales liées à mon poids.",
+    "Une partie de ma motivation vient de la pression ressentie lors de consultations médicales.",
+    "J’ai le sentiment que le corps médical attend cela de moi.",
+    "Je veux me sentir plus à l’aise dans l’intimité physique avec mon / ma partenaire.",
+    "Mon apparence corporelle rend parfois difficile le fait de me laisser voir par mon / ma partenaire.",
+    "Je me sentirais plus libre dans ma vie intime si j’étais plus à l’aise avec mon corps.",
+    "Je veux me sentir plus désirable dans la relation intime.",
+    "Mon rapport à mon corps influence ma capacité à partager une intimité physique.",
+    "Je me sentirais plus libre de porter certains vêtements si mon corps changeait.",
+    "Je pense que certaines situations sociales seraient plus simples pour moi avec un corps différent.",
+    "Il m’arrive d’imaginer que je serais perçu différemment si mon apparence corporelle changeait.",
+    "Je me sentirais plus à ma place dans certains contextes si mon corps correspondait davantage à l’image que j’aimerais renvoyer.",
+    "Je pense que perdre du poids pourrait me permettre d’être plus serein dans des situations où l’apparence compte.",
+    "Certains membres de ma famille m’y encouragent fortement.",
+    "Certaines remarques de ma famille sur mon poids me poussent à changer physiquement.",
+    "Je me sentirais moins jugé par mes proches si je perdais du poids.",
+    "Une partie de ma démarche vient de la pression ressentie dans mon environnement familial.",
+    "Je veux perdre du poids pour ne plus être confronté aux commentaires de mes proches sur mon corps.",
+    "Mon ou ma partenaire me le fait comprendre.",
+    "Les attentes de mon ou ma partenaire influencent mon envie de perdre du poids.",
+    "J’ai parfois l’impression que mon poids affecte le regard de mon ou ma partenaire sur moi.",
+    "Je me sentirais plus rassuré dans mon couple si je perdais du poids.",
+    "Une partie de ma motivation vient de la peur de décevoir mon ou ma partenaire à cause de mon apparence physique."
+  ];
+
+  var priorityItems = [
+    "Je veux me sentir plus satisfait de mon apparence.",
+    "Je veux protéger ma santé.",
+    "Je veux que mon corps ne soit pas un handicap dans les activités du quotidien.",
+    "Le jugement des autres m’affecte négativement.",
+    "Je veux reprendre le contrôle de mon corps et de mes habitudes.",
+    "Je veux retrouver l’apparence physique que j’avais avant.",
+    "Je veux me sentir plus capable et plus efficace dans mes activités.",
+    "J’ai en vue un événement important.",
+    "Je veux montrer à certaines personnes qu’elles se trompaient sur moi.",
+    "Je veux devenir une personne qui prend soin d’elle de manière durable.",
+    "Un professionnel de santé me l’a recommandé.",
+    "Les attentes de mon ou ma partenaire influencent ma démarche.",
+    "Je veux me sentir plus à l’aise dans l’intimité physique avec mon ou ma partenaire.",
+    "Je me sentirais plus libre de porter certains vêtements si mon corps changeait.",
+    "Certaines remarques ou attentes de mes proches me poussent à changer physiquement."
+  ];
+
+  var phqItems = [
+    "A peu d'intérêt ou plaisir à faire des choses",
+    "S'est senti abattu, déprimé ou sans espoir",
+    "A de la peine à s'endormir ou à dormir",
+    "Se sent fatigué ou sans énergie",
+    "A peu d'appétit ou mange trop",
+    "Se sent mal vis-à-vis de soi, se ressent comme un échec ou sent que vous vous laissez aller, vous ou votre famille",
+    "A de la peine à se concentrer en lisant le journal ou regardant la télévision",
+    "Bouge ou parle si lentement que les autres l'ont remarqué. Ou est si agité que vous bougez plus que d'habitude",
+    "Pense qu'il vaudrait mieux mourir ou que vous voulez vous faire du mal d'une certaine façon"
+  ];
+
+  var anxietyItems = [
+    "Je me sens calme",
+    "Je me sens nerveux",
+    "Je suis tendu",
+    "Je me sens contrarié",
+    "Je me sens anxieux",
+    "Je suis inquiet"
+  ];
+
+  var cspOptions = [
+    "Sans emploi",
+    "Demandeur·euse d'emploi",
+    "Étudiant·e",
+    "Apprenti·e ou alternant·e",
+    "Ouvrier·ère",
+    "Employé·e",
+    "Profession intermédiaire",
+    "Cadre",
+    "Cadre supérieur",
+    "Agriculteur·trice",
+    "Artisan/Commerçant·e",
+    "Profession libérale",
+    "Entrepreneur·e",
+    "Retraité·e",
+    "Autre"
+  ];
+
+  var genderOptions = [
+    "Homme",
+    "Femme"
+  ];
+
+  var educationOptions = [
+    "Aucun diplôme",
+    "Brevet des collèges",
+    "CAP / BEP",
+    "Baccalauréat",
+    "Bac +2",
+    "Licence / Bac +3",
+    "Master / Bac +5",
+    "Doctorat",
+    "Autre"
+  ];
+
+  function shuffled(items){
+    var copy = items.slice();
+    for(var i = copy.length - 1; i > 0; i--){
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = copy[i];
+      copy[i] = copy[j];
+      copy[j] = tmp;
+    }
+    return copy;
+  }
+
+  function creatorButtonHtml(){
+    return '<button class="creator-jump" id="creatorJump" type="button"' + (creatorMode ? '' : ' hidden') + '>Pages</button>';
+  }
+
+  function bindCreatorShortcut(openPanel){
+    var creatorJump = document.getElementById('creatorJump');
+    if(!creatorJump) return;
+
+    creatorJump.hidden = !creatorMode;
+    creatorJump.addEventListener('click', function(){
+      if(!creatorMode) return;
+      renderQuestionnaire();
+
+      if(openPanel !== false){
+        setTimeout(function(){
+          var panel = document.getElementById('creatorPanel');
+          if(panel) panel.classList.add('open');
+        }, 0);
+      }
+    });
+  }
+
+  function renderPriorityIntro(){
+    var body = document.querySelector('.body');
+
+    body.innerHTML =
+      '<div class="questionnaire">' +
+        creatorButtonHtml() +
+        '<section class="priority-message">' +
+          '<div class="priority-message-inner">' +
+            '<div class="priority-message-mark" aria-hidden="true"></div>' +
+            '<h3 class="wave-title" aria-label="Merci, vous avancez très bien.">' +
+              '<span style="--i:0">M</span><span style="--i:1">e</span><span style="--i:2">r</span><span style="--i:3">c</span><span style="--i:4">i</span><span style="--i:5">,</span><span class="space" aria-hidden="true"></span>' +
+              '<span style="--i:6">v</span><span style="--i:7">o</span><span style="--i:8">u</span><span style="--i:9">s</span><span class="space" aria-hidden="true"></span>' +
+              '<span style="--i:10">a</span><span style="--i:11">v</span><span style="--i:12">a</span><span style="--i:13">n</span><span style="--i:14">c</span><span style="--i:15">e</span><span style="--i:16">z</span><span class="space" aria-hidden="true"></span>' +
+              '<span style="--i:17">t</span><span style="--i:18">r</span><span style="--i:19">&egrave;</span><span style="--i:20">s</span><span class="space" aria-hidden="true"></span>' +
+              '<span style="--i:21">b</span><span style="--i:22">i</span><span style="--i:23">e</span><span style="--i:24">n</span><span style="--i:25">.</span>' +
+            '</h3>' +
+            '<p>Vous avez terminé la première partie.</p>' +
+            '<button class="cta ready" id="continueToPriority" type="button">Continuer</button>' +
+          '</div>' +
+        '</section>' +
+      '</div>';
+
+    document.getElementById('continueToPriority').addEventListener('click', renderPrioritySection);
+    bindCreatorShortcut(false);
+    body.scrollTop = 0;
+  }
+
+  function renderPrioritySection(){
+    var body = document.querySelector('.body');
+    var selected = [];
+
+    body.innerHTML =
+      '<div class="questionnaire">' +
+        creatorButtonHtml() +
+        '<div class="creator-panel" id="creatorPanel"></div>' +
+        '<div class="q-hero">' +
+          '<h2>Vos motivations<br>principales</h2>' +
+          '<span class="q-kicker">Psychologie & science</span>' +
+        '</div>' +
+        '<div class="q-content">' +
+          '<section class="q-card priority-instructions">' +
+            '<h3>Classement des motivations</h3>' +
+            '<p>Parmi les 15 propositions suivantes, choisissez les 5 qui correspondent le mieux à vos motivations pour perdre du poids.</p>' +
+            '<p style="margin-top:8px">Classez ensuite ces 5 propositions de la plus importante (1) à la moins importante (5).</p>' +
+          '</section>' +
+          '<div class="priority-count" id="priorityCount">' +
+            '<span class="priority-count-text" id="priorityCountText">0/5 sélectionnée</span>' +
+            '<span class="priority-progress" aria-hidden="true"><span id="priorityProgress"></span></span>' +
+          '</div>' +
+          '<div class="priority-grid" id="priorityGrid"></div>' +
+          '<section class="q-card priority-instructions">' +
+            '<h3>Vos 5 motivations classées</h3>' +
+            '<p>Utilisez les flèches pour ajuster l’ordre, de la plus importante (1) à la moins importante (5).</p>' +
+            '<div class="ranked-list" id="rankedList"></div>' +
+          '</section>' +
+          '<div class="q-nav">' +
+            '<button class="cta" id="prioritySubmit" type="button" disabled>Valider mon classement</button>' +
+          '</div>' +
+        '</div>' +
+      '</div>';
+
+    var grid = document.getElementById('priorityGrid');
+    var ranked = document.getElementById('rankedList');
+    var countText = document.getElementById('priorityCountText');
+    var progress = document.getElementById('priorityProgress');
+    var submit = document.getElementById('prioritySubmit');
+    bindCreatorShortcut();
+
+    priorityItems.forEach(function(text, index){
+      var button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'priority-option';
+      button.dataset.index = index;
+      button.textContent = text;
+      grid.appendChild(button);
+    });
+
+    function renderSelected(){
+      countText.textContent = selected.length + '/5 sélectionnée' + (selected.length > 1 ? 's' : '');
+      progress.style.width = Math.round(selected.length / 5 * 100) + '%';
+      submit.disabled = selected.length !== 5;
+      submit.classList.toggle('ready', selected.length === 5);
+      document.getElementById('priorityCount').classList.toggle('complete', selected.length === 5);
+      grid.classList.toggle('complete', selected.length === 5);
+
+      grid.querySelectorAll('.priority-option').forEach(function(button){
+        var isSelected = selected.indexOf(Number(button.dataset.index)) !== -1;
+        button.classList.toggle('selected', isSelected);
+        button.classList.toggle('hidden', !isSelected && selected.length === 5);
+        button.disabled = !isSelected && selected.length >= 5;
+      });
+
+      ranked.innerHTML = '';
+      if(!selected.length){
+        var empty = document.createElement('p');
+        empty.textContent = 'Vos choix apparaîtront ici.';
+        ranked.appendChild(empty);
+        return;
+      }
+
+      selected.forEach(function(itemIndex, rank){
+        var item = document.createElement('div');
+        item.className = 'ranked-item';
+
+        var num = document.createElement('span');
+        num.className = 'rank-num';
+        num.textContent = rank + 1;
+
+        var text = document.createElement('span');
+        text.textContent = priorityItems[itemIndex];
+
+        var actions = document.createElement('span');
+        actions.className = 'rank-actions';
+
+        var up = document.createElement('button');
+        up.type = 'button';
+        up.textContent = '↑';
+        up.disabled = rank === 0;
+        up.addEventListener('click', function(){
+          var tmp = selected[rank - 1];
+          selected[rank - 1] = selected[rank];
+          selected[rank] = tmp;
+          renderSelected();
+        });
+
+        var down = document.createElement('button');
+        down.type = 'button';
+        down.textContent = '↓';
+        down.disabled = rank === selected.length - 1;
+        down.addEventListener('click', function(){
+          var tmp = selected[rank + 1];
+          selected[rank + 1] = selected[rank];
+          selected[rank] = tmp;
+          renderSelected();
+        });
+
+        actions.appendChild(up);
+        actions.appendChild(down);
+        item.appendChild(num);
+        item.appendChild(text);
+        item.appendChild(actions);
+        ranked.appendChild(item);
+      });
+    }
+
+    grid.addEventListener('click', function(e){
+      var button = e.target.closest('.priority-option');
+      if(!button) return;
+
+      var index = Number(button.dataset.index);
+      var position = selected.indexOf(index);
+
+      if(position !== -1){
+        selected.splice(position, 1);
+      }else if(selected.length < 5){
+        selected.push(index);
+      }
+
+      renderSelected();
+    });
+
+    submit.addEventListener('click', function(){
+      if(submit.disabled) return;
+
+      for(var priorityIndex = 1; priorityIndex <= 15; priorityIndex++){
+        questionnaireData["priority_item_" + String(priorityIndex).padStart(2, "0")] = 0;
+      }
+
+      selected.forEach(function(itemIndex, rank){
+        questionnaireData["priority_item_" + String(itemIndex + 1).padStart(2, "0")] = rank + 1;
+      });
+
+      renderMotivationBreak();
+    });
+
+    renderSelected();
+    body.scrollTop = 0;
+  }
+
+  function renderMotivationBreak(){
+    var body = document.querySelector('.body');
+
+    body.innerHTML =
+      '<div class="questionnaire">' +
+        creatorButtonHtml() +
+        '<section class="priority-message">' +
+          '<div class="priority-message-inner">' +
+            '<div class="priority-message-mark" aria-hidden="true"></div>' +
+            '<h3 class="wiggle-title" aria-label="Un dernier effort !!">' +
+              '<span style="--r1:-4deg;--r2:5deg;--dur:.52s;--delay:-.04s">U</span><span style="--r1:3deg;--r2:-5deg;--dur:.67s;--delay:-.18s">n</span><span class="space" aria-hidden="true"></span>' +
+              '<span style="--r1:-6deg;--r2:3deg;--dur:.59s;--delay:-.11s">d</span><span style="--r1:5deg;--r2:-4deg;--dur:.71s;--delay:-.27s">e</span><span style="--r1:-3deg;--r2:6deg;--dur:.55s;--delay:-.15s">r</span><span style="--r1:4deg;--r2:-6deg;--dur:.64s;--delay:-.32s">n</span><span style="--r1:-5deg;--r2:4deg;--dur:.50s;--delay:-.08s">i</span><span style="--r1:6deg;--r2:-3deg;--dur:.69s;--delay:-.22s">e</span><span style="--r1:-4deg;--r2:5deg;--dur:.57s;--delay:-.35s">r</span><span class="space" aria-hidden="true"></span>' +
+              '<span style="--r1:5deg;--r2:-5deg;--dur:.61s;--delay:-.19s">e</span><span style="--r1:-6deg;--r2:4deg;--dur:.54s;--delay:-.29s">f</span><span style="--r1:3deg;--r2:-6deg;--dur:.68s;--delay:-.13s">f</span><span style="--r1:-4deg;--r2:6deg;--dur:.56s;--delay:-.24s">o</span><span style="--r1:6deg;--r2:-4deg;--dur:.63s;--delay:-.06s">r</span><span style="--r1:-5deg;--r2:3deg;--dur:.58s;--delay:-.31s">t</span><span class="space" aria-hidden="true"></span>' +
+              '<span style="--r1:7deg;--r2:-7deg;--dur:.48s;--delay:-.09s">!</span><span style="--r1:-7deg;--r2:6deg;--dur:.53s;--delay:-.25s">!</span><span class="space" aria-hidden="true"></span><span style="--r1:4deg;--r2:-4deg;--dur:.72s;--delay:-.17s">&#128540;</span>' +
+            '</h3>' +
+            '<p>Vous avez termin&eacute; cette partie.</p>' +
+            '<button class="cta ready" id="continueAfterBreak" type="button">Continuer</button>' +
+          '</div>' +
+        '</section>' +
+      '</div>';
+
+    document.getElementById('continueAfterBreak').addEventListener('click', renderPhqSection);
+    bindCreatorShortcut(false);
+    body.scrollTop = 0;
+    return;
+
+    body.innerHTML =
+      '<div class="questionnaire">' +
+        creatorButtonHtml() +
+        '<div class="q-hero final-message">' +
+          '<h3>Un dernier effort !! 😜</h3>' +
+        '</div>' +
+        '<div class="q-content">' +
+          '<button class="cta ready" id="continueAfterBreak" type="button">Continuer</button>' +
+        '</div>' +
+      '</div>';
+
+    body.innerHTML =
+      '<div class="questionnaire">' +
+        creatorButtonHtml() +
+        '<section class="priority-message">' +
+          '<div class="priority-message-inner">' +
+            '<div class="priority-message-mark" aria-hidden="true"></div>' +
+            '<h3>Un dernier effort !! ðŸ˜œ</h3>' +
+            '<p>Vous avez terminÃ© cette partie. Les prochaines questions permettent de complÃ©ter votre profil de faÃ§on plus globale.</p>' +
+            '<button class="cta ready" id="continueAfterBreak" type="button">Continuer</button>' +
+          '</div>' +
+        '</section>' +
+      '</div>';
+
+    document.getElementById('continueAfterBreak').addEventListener('click', renderPhqSection);
+    bindCreatorShortcut(false);
+    body.scrollTop = 0;
+  }
+
+  function scaleLegendHtml(options, className){
+    return '<div class="' + className + '">' +
+      '<span class="scale-points">' + options.map(function(option){
+        return '<span class="scale-point">' +
+          '<span class="scale-dot">' + option.value + '</span>' +
+          '<span class="scale-label">' + option.label + '</span>' +
+        '</span>';
+      }).join('') + '</span>' +
+    '</div>';
+  }
+
+  function renderScaleSection(config){
+    var body = document.querySelector('.body');
+    var answers = {};
+
+    body.innerHTML =
+      '<div class="questionnaire">' +
+        creatorButtonHtml() +
+        '<div class="q-hero">' +
+          '<h2>' + config.title + '</h2>' +
+          '<span class="q-kicker">' + config.kicker + '</span>' +
+        '</div>' +
+        '<div class="q-content">' +
+          '<section class="likert-card likert-intro">' +
+            '<h3>Consigne</h3>' +
+            '<p>' + config.prompt + '</p>' +
+            scaleLegendHtml(config.values, 'scale-help') +
+            (config.subtitle ? '<p class="scale-question">' + config.subtitle + '</p>' : '') +
+          '</section>' +
+          '<div class="likert-list" id="scaleList"></div>' +
+          '<div class="q-nav">' +
+            '<button class="cta" id="scaleNext" type="button" disabled>Suivant</button>' +
+          '</div>' +
+        '</div>' +
+      '</div>';
+
+    var list = document.getElementById('scaleList');
+    var next = document.getElementById('scaleNext');
+    bindCreatorShortcut();
+
+    config.items.forEach(function(text, index){
+      var item = document.createElement('section');
+      item.className = 'likert-item';
+
+      var question = document.createElement('p');
+      question.textContent = text;
+      item.appendChild(question);
+
+      var scale = document.createElement('div');
+      scale.className = 'likert-scale compact-scale';
+
+      config.values.forEach(function(option){
+        var label = document.createElement('label');
+        var radio = document.createElement('input');
+        radio.type = 'radio';
+        radio.name = config.name + '_' + index;
+        radio.value = option.value;
+        label.appendChild(radio);
+        label.appendChild(document.createTextNode(option.value));
+        scale.appendChild(label);
+      });
+
+      item.appendChild(scale);
+      list.appendChild(item);
+    });
+
+    list.addEventListener('change', function(e){
+      if(e.target.matches('input[type="radio"]')){
+        answers[e.target.name] = e.target.value;
+        next.disabled = Object.keys(answers).length !== config.items.length;
+        next.classList.toggle('ready', !next.disabled);
+      }
+    });
+
+    next.addEventListener('click', function(){
+      if(next.disabled) return;
+
+      Object.keys(answers).forEach(function(key){
+        var parts = key.split("_");
+        var prefix = parts[0];
+        var index = Number(parts[1]) + 1;
+        var columnName = prefix + "_" + String(index).padStart(2, "0");
+        questionnaireData[columnName] = answers[key];
+      });
+
+      config.next();
+    });
+
+    body.scrollTop = 0;
+  }
+
+  function renderPhqSection(){
+    renderScaleSection({
+      kicker:'Psychologie & science',
+      title:'Vos ressentis',
+      name:'phq',
+      items:phqItems,
+      values:[
+        {value:0, label:'Pas du tout'},
+        {value:1, label:'Plusieurs jours'},
+        {value:2, label:'Plus que la moitié des jours'},
+        {value:3, label:'Presque chaque jour'}
+      ],
+      prompt:'Utilisez l’échelle suivante pour indiquer dans quelle mesure les descriptions contenues dans les énoncés se rapportent à vous.',
+      subtitle:'Au cours de ces 2 dernières semaines, avez-vous été ennuyé·e par l’un ou l’autre des problèmes suivants ?',
+      next:renderAnxietySection
+    });
+  }
+
+  function renderAnxietySection(){
+    renderScaleSection({
+      kicker:'Psychologie & science',
+      title:'Vos ressentis',
+      name:'anxiety',
+      items:anxietyItems,
+      values:[
+        {value:1, label:'Pas du tout'},
+        {value:2, label:'Un peu'},
+        {value:3, label:'Modérément'},
+        {value:4, label:'Beaucoup'}
+      ],
+      prompt:'Pour chaque affirmation, veuillez indiquer comment vous vous sentez en général dans votre vie. Il n&rsquo;y a pas de bonne ou de mauvaise réponse. Essayez de répondre spontanément.',
+      next:renderDemographicsSection
+    });
+  }
+
+  function renderDemographicsSection(){
+    var body = document.querySelector('.body');
+
+    function options(items){
+      return items.map(function(item){
+        return '<button type="button" data-value="' + item + '">' + item + '</button>';
+      }).join('');
+    }
+
+    body.innerHTML =
+      '<div class="questionnaire">' +
+        creatorButtonHtml() +
+        '<div class="q-hero">' +
+          '<h2>Informations<br>démographiques</h2>' +
+          '<span class="q-kicker">Psychologie & science</span>' +
+        '</div>' +
+        '<div class="q-content">' +
+          '<section class="q-card">' +
+            '<h3>Votre profil</h3>' +
+            '<p>Ces informations permettent de mieux comprendre les réponses à l’échelle du groupe.</p>' +
+            '<div class="demo-field"><label>Quel est votre genre ?</label><div class="pretty-select" data-field="gender"><button class="pretty-select-btn" type="button">Sélectionner</button><div class="pretty-options">' + options(genderOptions) + '</div></div></div>' +
+            '<div class="demo-field"><label>Quelle est votre catégorie socio-professionnelle ?</label><div class="pretty-select" data-field="csp"><button class="pretty-select-btn" type="button">Sélectionner</button><div class="pretty-options">' + options(cspOptions) + '</div></div></div>' +
+            '<div class="demo-field"><label>Quel est votre niveau d’étude le plus haut ?</label><div class="pretty-select" data-field="education"><button class="pretty-select-btn" type="button">Sélectionner</button><div class="pretty-options">' + options(educationOptions) + '</div></div></div>' +
+            '<div class="demo-field"><label for="age">Quel est votre âge ?</label>' +
+              '<div class="age-picker" id="agePicker">' +
+                '<div class="age-value"><span id="ageValue">35</span></div>' +
+                '<div class="age-slider-wrap">' +
+                  '<input class="age-slider" id="age" type="range" min="18" max="90" value="35" aria-label="Âge">' +
+                  '<div class="age-hint">Glissez le curseur de haut en bas pour ajuster votre âge.</div>' +
+                '</div>' +
+              '</div>' +
+            '</div>' +
+          '</section>' +
+          '<div class="q-nav">' +
+            '<button class="cta" id="demoSubmit" type="button" disabled>Terminer le questionnaire</button>' +
+          '</div>' +
+        '</div>' +
+      '</div>';
+
+    var demoAnswers = { gender:'', csp:'', education:'', age:document.getElementById('age').value };
+    var demoOtherAnswers = { csp:'', education:'' };
+    var submit = document.getElementById('demoSubmit');
+    var ageValue = document.getElementById('ageValue');
+    var ageInput = document.getElementById('age');
+    var agePicker = document.getElementById('agePicker');
+    bindCreatorShortcut();
+
+    ['csp','education'].forEach(function(field){
+      var select = document.querySelector('.pretty-select[data-field="' + field + '"]');
+      if(!select) return;
+
+      var other = document.createElement('div');
+      other.className = 'demo-other';
+      other.dataset.otherFor = field;
+
+      var input = document.createElement('input');
+      input.type = 'text';
+      input.autocomplete = 'off';
+      input.placeholder = field === 'csp' ? 'Précisez votre catégorie' : 'Précisez votre niveau d’étude';
+      input.addEventListener('input', function(){
+        demoOtherAnswers[field] = input.value;
+        refreshDemo();
+      });
+
+      other.appendChild(input);
+      select.insertAdjacentElement('afterend', other);
+    });
+
+    function refreshDemo(){
+      var ok = ['gender','csp','education','age'].every(function(key){
+        return String(demoAnswers[key]).trim() !== '';
+      });
+      ['csp','education'].forEach(function(field){
+        if(demoAnswers[field] === 'Autre' && !String(demoOtherAnswers[field]).trim()){
+          ok = false;
+        }
+      });
+      submit.disabled = !ok;
+      submit.classList.toggle('ready', ok);
+    }
+
+    document.querySelectorAll('.pretty-select').forEach(function(select){
+      var trigger = select.querySelector('.pretty-select-btn');
+      var field = select.dataset.field;
+
+      trigger.addEventListener('click', function(){
+        document.querySelectorAll('.pretty-select.open').forEach(function(openSelect){
+          if(openSelect !== select) openSelect.classList.remove('open');
+        });
+        select.classList.toggle('open');
+      });
+
+      select.querySelectorAll('.pretty-options button').forEach(function(option){
+        option.addEventListener('click', function(){
+          demoAnswers[field] = option.dataset.value;
+          trigger.textContent = option.dataset.value;
+          var other = document.querySelector('.demo-other[data-other-for="' + field + '"]');
+          if(other){
+            var input = other.querySelector('input');
+            var isOther = option.dataset.value === 'Autre';
+            other.classList.toggle('show', isOther);
+            if(isOther){
+              setTimeout(function(){ input.focus(); }, 0);
+            }else{
+              input.value = '';
+              demoOtherAnswers[field] = '';
+            }
+          }
+          select.querySelectorAll('.pretty-options button').forEach(function(item){
+            item.classList.toggle('selected', item === option);
+          });
+          select.classList.remove('open');
+          refreshDemo();
+        });
+      });
+    });
+
+    function setAgeZoom(on){
+      agePicker.classList.toggle('zoom', on);
+    }
+
+    ageInput.addEventListener('input', function(e){
+      demoAnswers.age = e.target.value;
+      ageValue.textContent = e.target.value;
+      refreshDemo();
+    });
+
+    ['pointerdown','touchstart','focus'].forEach(function(eventName){
+      ageInput.addEventListener(eventName, function(){
+        setAgeZoom(true);
+      });
+    });
+
+    ['pointerup','pointercancel','touchend','blur'].forEach(function(eventName){
+      ageInput.addEventListener(eventName, function(){
+        setTimeout(function(){
+          setAgeZoom(false);
+        }, 650);
+      });
+    });
+
+    document.addEventListener('click', function(e){
+      if(!e.target.closest('.pretty-select')){
+        document.querySelectorAll('.pretty-select.open').forEach(function(select){
+          select.classList.remove('open');
+        });
+      }
+    });
+
+    submit.addEventListener('click', async function(){
+      if(submit.disabled) return;
+
+      questionnaireData.gender = demoAnswers.gender;
+      questionnaireData.csp = demoAnswers.csp === 'Autre' ? demoOtherAnswers.csp.trim() : demoAnswers.csp;
+      questionnaireData.education = demoAnswers.education === 'Autre' ? demoOtherAnswers.education.trim() : demoAnswers.education;
+      questionnaireData.age = demoAnswers.age;
+      questionnaireData.progress_step = "demographics_completed";
+
+      submit.disabled = true;
+      submit.textContent = "Envoi en cours...";
+
+      try{
+        await sendToGoogleSheet();
+        submit.textContent = "Réponse enregistrée";
+        submit.classList.add("ready");
+        showToast("Questionnaire terminé et réponse enregistrée");
+      }catch(error){
+        submit.disabled = false;
+        submit.textContent = "Réessayer";
+        showToast("Erreur lors de l’envoi. Vérifiez l’URL Google Apps Script.", "error");
+      }
+    });
+
+    refreshDemo();
+    body.scrollTop = 0;
+  }
+
+  function renderQuestionnaire(){
+    var creatorStart = document.getElementById('creatorStart');
+    if(creatorStart) creatorStart.hidden = true;
+
+    var body = document.querySelector('.body');
+    var items = shuffled(motivationItems.map(function(text, index){
+      return {
+        text:text,
+        originalIndex:index
+      };
+    }));
+
+    questionnaireData.motivation_order_json = JSON.stringify(
+      items.map(function(item, position){
+        return {
+          display_position:position + 1,
+          original_index:item.originalIndex + 1,
+          text:item.text
+        };
+      })
+    );
+
+    body.innerHTML =
+      '<div class="questionnaire">' +
+        '<button class="creator-jump" id="creatorJump" type="button">Pages</button>' +
+        '<div class="creator-panel" id="creatorPanel"></div>' +
+        '<div class="q-hero">' +
+          '<h2>Questionnaire<br>de motivation</h2>' +
+          '<span class="q-kicker">Psychologie & science</span>' +
+        '</div>' +
+        '<div class="q-content">' +
+          '<section class="likert-card likert-intro q-intro-page">' +
+            '<h3>Motivations actuelles</h3>' +
+            '<p>Ce questionnaire comporte des énoncés qui peuvent s’appliquer à votre situation. Il n’y a pas de bonnes ou de mauvaises réponses. Il s’agit de répondre honnêtement et spontanément. Nous vous demandons de lire chaque énoncé attentivement et de dire s’ils décrivent votre façon d’être ou d’agir.<br><br>L’objectif est de comprendre ce qui joue réellement un rôle dans votre envie actuelle de perdre du poids.</p>' +
+            '<div class="scale-legend">' +
+              '<span class="scale-points">' +
+                '<span class="scale-point"><span class="scale-dot">1</span><span class="scale-label">Pas du tout<br>d&rsquo;accord</span></span>' +
+                '<span class="scale-point"><span class="scale-dot">2</span><span class="scale-label">Plut&ocirc;t pas<br>d&rsquo;accord</span></span>' +
+                '<span class="scale-point"><span class="scale-dot">3</span><span class="scale-label">Ni d&rsquo;accord<br>ni pas d&rsquo;accord</span></span>' +
+                '<span class="scale-point"><span class="scale-dot">4</span><span class="scale-label">Plut&ocirc;t<br>d&rsquo;accord</span></span>' +
+                '<span class="scale-point"><span class="scale-dot">5</span><span class="scale-label">Tout &agrave; fait<br>d&rsquo;accord</span></span>' +
+              '</span>' +
+            '</div>' +
+            '<p class="scale-question">Pour chaque affirmation, indiquez dans quelle mesure cette raison participe aujourd’hui à votre motivation, en utilisant le degré d&rsquo;accord qui vous correspond.</p>' +
+          '</section>' +
+          '<section class="q-card q-code-page">' +
+            '<h3>Code de participation</h3>' +
+            '<p>Afin d’anonymiser votre participation veuillez inventer un code alphanumérique de quatre caractères (ex : A5BN)</p>' +
+            '<input class="code-input" id="participantCode" maxlength="4" inputmode="text" autocomplete="off" placeholder="A5BN" aria-label="Code alphanumérique de quatre caractères">' +
+            '<p style="margin-top:12px">Si vous souhaitez un retour sur vos réponses a posteriori de l’étude, veuillez préserver votre code afin que l’on puisse retrouver vos réponses.</p>' +
+          '</section>' +
+          '<div class="q-bars" id="qBars">' +
+            '<div class="q-page-status" aria-label="Progression des pages"><span id="qPageStatus"></span></div>' +
+          '</div>' +
+          '<div class="likert-list" id="likertList"></div>' +
+          '<div class="q-nav">' +
+            '<button class="cta" id="nextPage" type="button">Suivant</button>' +
+          '</div>' +
+        '</div>' +
+      '</div>';
+
+    var list = document.getElementById('likertList');
+    var bars = document.getElementById('qBars');
+    var pageStatus = document.getElementById('qPageStatus');
+    var next = document.getElementById('nextPage');
+    var creatorJump = document.getElementById('creatorJump');
+    var creatorPanel = document.getElementById('creatorPanel');
+    var code = document.getElementById('participantCode');
+    var introPage = document.querySelector('.q-intro-page');
+    var codePage = document.querySelector('.q-code-page');
+    var answers = {};
+    var currentPage = 0;
+    var perPage = 10;
+    var introPages = 1;
+    var questionPageCount = Math.ceil(items.length / perPage);
+    var pageCount = introPages + questionPageCount;
+    creatorJump.hidden = !creatorMode;
+
+    function renderCreatorPanel(){
+      creatorPanel.innerHTML = '';
+
+      var homeButton = document.createElement('button');
+      homeButton.type = 'button';
+      homeButton.textContent = 'Page d’accueil';
+      homeButton.addEventListener('click', function(){
+        renderHomePage();
+      });
+      creatorPanel.appendChild(homeButton);
+
+      var codeButton = document.createElement('button');
+      codeButton.type = 'button';
+      codeButton.textContent = 'Page code';
+      codeButton.addEventListener('click', function(){
+        currentPage = 0;
+        renderPage();
+        creatorPanel.classList.remove('open');
+        document.querySelector('.body').scrollTop = 0;
+      });
+      creatorPanel.appendChild(codeButton);
+
+      for(var p = 0; p < questionPageCount; p++){
+        (function(page){
+          var button = document.createElement('button');
+          button.type = 'button';
+          button.textContent = page === 0 ? 'Motivation PDP' : 'Questions ' + (page * perPage + 1) + ' à ' + Math.min((page + 1) * perPage, items.length);
+          button.addEventListener('click', function(){
+            currentPage = introPages + page;
+            renderPage();
+            creatorPanel.classList.remove('open');
+            document.querySelector('.body').scrollTop = 0;
+          });
+          creatorPanel.appendChild(button);
+        })(p);
+      }
+
+      var priorityButton = document.createElement('button');
+      priorityButton.type = 'button';
+      priorityButton.textContent = 'Remerciement 1';
+      priorityButton.addEventListener('click', function(){
+        renderPriorityIntro();
+      });
+      creatorPanel.appendChild(priorityButton);
+
+      var priorityRankingButton = document.createElement('button');
+      priorityRankingButton.type = 'button';
+      priorityRankingButton.textContent = 'Classement motivation';
+      priorityRankingButton.addEventListener('click', function(){
+        renderPrioritySection();
+      });
+      creatorPanel.appendChild(priorityRankingButton);
+
+      [
+        ['Message motivation', renderMotivationBreak],
+        ['PHQ', renderPhqSection],
+        ['STAI', renderAnxietySection],
+        ['Informations démographiques', renderDemographicsSection]
+      ].forEach(function(entry){
+        var button = document.createElement('button');
+        button.type = 'button';
+        button.textContent = entry[0];
+        button.addEventListener('click', entry[1]);
+        creatorPanel.appendChild(button);
+      });
+    }
+
+    function renderPage(){
+      list.innerHTML = '';
+      list.style.animation = 'none';
+      list.offsetHeight;
+      list.style.animation = '';
+
+      if(currentPage < introPages){
+        updateQuestionnaireState();
+        return;
+      }
+
+      var questionPage = currentPage - introPages;
+
+      items.slice(questionPage * perPage, questionPage * perPage + perPage).forEach(function(itemData, offset){
+        var index = questionPage * perPage + offset;
+        var item = document.createElement('section');
+        item.className = 'likert-item';
+
+        var question = document.createElement('p');
+        question.textContent = itemData.text;
+        item.appendChild(question);
+
+        var scale = document.createElement('div');
+        scale.className = 'likert-scale';
+
+        [1,2,3,4,5].forEach(function(value){
+          var label = document.createElement('label');
+          var radio = document.createElement('input');
+          radio.type = 'radio';
+          radio.name = 'motivation_' + index;
+          radio.value = value;
+          radio.checked = answers[index] === String(value);
+          label.appendChild(radio);
+          label.appendChild(document.createTextNode(value));
+          scale.appendChild(label);
+        });
+
+        item.appendChild(scale);
+        list.appendChild(item);
+      });
+
+      updateQuestionnaireState();
+    }
+
+    function currentPageComplete(){
+      if(currentPage === 0) return /^[A-Z0-9]{4}$/.test(code.value);
+
+      var questionPage = currentPage - introPages;
+      var start = questionPage * perPage;
+      var end = Math.min(start + perPage, items.length);
+      for(var i = start; i < end; i++){
+        if(!answers[i]) return false;
+      }
+      return true;
+    }
+
+    function updateQuestionnaireState(){
+      var answered = Object.keys(answers).length;
+      var codeOk = /^[A-Z0-9]{4}$/.test(code.value);
+      var pageProgress = Math.round((currentPage + 1) / pageCount * 100);
+      pageStatus.style.width = pageProgress + '%';
+      introPage.style.display = currentPage >= introPages ? '' : 'none';
+      codePage.style.display = currentPage === 0 ? '' : 'none';
+      bars.style.display = currentPage >= introPages ? '' : 'none';
+      list.style.display = currentPage >= introPages ? 'grid' : 'none';
+
+      if(currentPage === pageCount - 1){
+        next.textContent = 'Terminer';
+        next.disabled = !(codeOk && answered === items.length);
+      }else{
+        next.textContent = 'Suivant';
+        next.disabled = !currentPageComplete();
+      }
+
+      next.classList.toggle('ready', !next.disabled);
+    }
+
+    code.addEventListener('input', function(){
+      code.value = code.value.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 4);
+      if(code.value === 'CREA'){
+        creatorMode = true;
+      }
+      creatorJump.hidden = !creatorMode;
+      updateQuestionnaireState();
+    });
+
+    creatorJump.addEventListener('click', function(){
+      if(!creatorMode) return;
+      creatorPanel.classList.toggle('open');
+    });
+
+    list.addEventListener('change', function(e){
+      if(e.target.matches('input[type="radio"]')){
+        answers[e.target.name.replace('motivation_', '')] = e.target.value;
+        updateQuestionnaireState();
+      }
+    });
+
+    next.addEventListener('click', function(){
+      if(next.disabled) return;
+
+      if(currentPage < pageCount - 1){
+        currentPage++;
+        renderPage();
+        document.querySelector('.body').scrollTop = 0;
+        return;
+      }
+
+      questionnaireData.participant_code = code.value;
+
+      items.forEach(function(itemData, shuffledIndex){
+        var columnName = "motivation_" + String(itemData.originalIndex + 1).padStart(2, "0");
+        questionnaireData[columnName] = answers[shuffledIndex] || "";
+      });
+
+      renderPriorityIntro();
+    });
+
+    renderPage();
+    renderCreatorPanel();
+    body.scrollTop = 0;
+  }
+
+  cta.addEventListener('click', function(){
+    if(cta.disabled) return;
+    recordConsentChecks();
+    renderQuestionnaire();
+  });
+
+  refresh();
+})();
+</script>
